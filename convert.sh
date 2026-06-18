@@ -29,6 +29,19 @@ root = tree.getroot()
 # Handle XML namespace
 ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 
+# Preserve enrichment from the existing output file if present
+existing_enrichment = {}
+try:
+    with open(output_file) as fh:
+        for s in json.load(fh):
+            if 'lat' in s:
+                existing_enrichment[s['id']] = {
+                    k: v for k, v in s.items()
+                    if k not in ('id', 'name', 'state', 'url')
+                }
+except (FileNotFoundError, json.JSONDecodeError):
+    pass
+
 stores = []
 for url_el in root.findall('sm:url', ns):
     loc = url_el.find('sm:loc', ns)
@@ -46,17 +59,16 @@ for url_el in root.findall('sm:url', ns):
     name = m.group(2).replace('-', ' ').title()
     store_id = int(m.group(3))
 
-    stores.append({
-        "id": store_id,
-        "name": name,
-        "state": state,
-        "url": href,
-    })
+    store = {"id": store_id, "name": name, "state": state, "url": href}
+    if store_id in existing_enrichment:
+        store.update(existing_enrichment[store_id])
+    stores.append(store)
 
 stores.sort(key=lambda s: (s['state'], s['name']))
 
 with open(output_file, 'w') as f:
     json.dump(stores, f, indent=2)
 
-print(f"Wrote {len(stores)} stores to {output_file}")
+need_enrich = sum(1 for s in stores if 'lat' not in s)
+print(f"Wrote {len(stores)} stores to {output_file} ({need_enrich} need enrichment)")
 EOF

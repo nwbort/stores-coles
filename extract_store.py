@@ -113,10 +113,17 @@ def extract_from_json_ld(items):
     return None
 
 
+class BotBlockedError(Exception):
+    pass
+
+
 def extract(url, verbose=False):
     html_content = fetch_page(url)
     if verbose:
         print(f"Page size: {len(html_content):,} bytes", file=sys.stderr)
+
+    if 'Pardon Our Interruption' in html_content:
+        raise BotBlockedError(f"bot-blocked size={len(html_content)}")
 
     # Try __NEXT_DATA__ first (richer data)
     next_data = find_next_data(html_content)

@@ -15,10 +15,11 @@ Options:
 
 import json
 import time
+import random
 import threading
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from extract_store import extract
+from extract_store import extract, BotBlockedError
 
 STORES_FILE = 'stores.json'
 SAVE_INTERVAL = 50
@@ -51,21 +52,34 @@ def save_stores(stores):
     print(f'  -> saved {STORES_FILE}', flush=True)
 
 
-def fetch_one(store, rate_limiter):
-    rate_limiter.acquire()
-    try:
-        info = extract(store['url'])
-        return store['id'], info, None
-    except Exception as e:
-        return store['id'], None, str(e)
+BOTBLOCK_WAIT = 60  # seconds to pause after a bot-block before retrying
+
+
+def fetch_one(store, rate_limiter, retries=2):
+    for attempt in range(retries + 1):
+        rate_limiter.acquire()
+        try:
+            info = extract(store['url'])
+            return store['id'], info, None
+        except BotBlockedError:
+            if attempt < retries:
+                wait = BOTBLOCK_WAIT * (attempt + 1) + random.uniform(0, 30)
+                print(f"  [bot-block] {store['name']} – retry {attempt + 1}/{retries} in {wait:.0f}s",
+                      flush=True)
+                time.sleep(wait)
+            else:
+                return store['id'], None, 'bot-blocked'
+        except Exception as e:
+            return store['id'], None, str(e)
+    return store['id'], None, 'bot-blocked'
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--force', action='store_true', help='Re-enrich all stores')
-    parser.add_argument('--workers', type=int, default=3, help='Concurrent workers')
-    parser.add_argument('--delay', type=float, default=0.5,
-                        help='Min seconds between requests globally (default: 0.5)')
+    parser.add_argument('--workers', type=int, default=1, help='Concurrent workers (default: 1)')
+    parser.add_argument('--delay', type=float, default=2.0,
+                        help='Min seconds between requests globally (default: 2.0)')
     parser.add_argument('--limit', type=int, default=None, help='Max stores to process')
     args = parser.parse_args()
 
