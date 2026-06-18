@@ -20,19 +20,31 @@ jobs:
       with:
         python-version: "3.12"
 
-    - name: Extract info for one store
+    - name: Test single-store extraction
       run: |
         python3 extract_store.py \
-          'https://www.coles.com.au/find-stores/coles/act/amaroo-5784' \
-          > store_test_output.json
-        echo "--- store_test_output.json ---"
-        cat store_test_output.json
+          'https://www.coles.com.au/find-stores/coles/act/amaroo-5784'
 
-    - name: Commit test output
+    - name: Test enrich on first 5 stores
+      run: |
+        python3 enrich_stores.py --limit 5 --delay 1
+
+    - name: Show enriched output
+      run: |
+        python3 - <<'EOF'
+        import json
+        stores = json.load(open('stores.json'))
+        enriched = [s for s in stores if 'lat' in s]
+        print(f"{len(enriched)} stores enriched")
+        for s in enriched[:5]:
+            print(json.dumps(s, indent=2))
+        EOF
+
+    - name: Commit enriched stores
       run: |
         git config user.name "Automated"
         git config user.email "actions@users.noreply.github.com"
-        git add store_test_output.json
-        git commit -m "Test: store extraction output for Amaroo 5784" || exit 0
+        git add stores.json
+        git commit -m "Test: enrich first 5 stores with address/coords/hours" || exit 0
         git pull --rebase
         git push
