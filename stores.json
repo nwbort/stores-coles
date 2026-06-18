@@ -75,25 +75,73 @@
     "id": 735,
     "name": "Curtin",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/curtin-735"
+    "url": "https://www.coles.com.au/find-stores/coles/act/curtin-735",
+    "lat": -35.325584,
+    "lng": 149.082414,
+    "address": "51 Curtin Place",
+    "suburb": "Curtin",
+    "postcode": "2605",
+    "phone": "(02) 5156 6400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 4814,
     "name": "Dickson",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/dickson-4814"
+    "url": "https://www.coles.com.au/find-stores/coles/act/dickson-4814",
+    "lat": -35.249174,
+    "lng": 149.138702,
+    "address": "36 Badham Street",
+    "suburb": "Dickson",
+    "postcode": "2602",
+    "phone": "(02) 5122 5400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 859,
     "name": "Griffith",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/griffith-859"
+    "url": "https://www.coles.com.au/find-stores/coles/act/griffith-859",
+    "lat": -35.320835,
+    "lng": 149.134113,
+    "address": "Franklin Street & Flinders Way",
+    "suburb": "Griffith",
+    "postcode": "2603",
+    "phone": "(02) 6126 9600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 803,
     "name": "Gungahlin",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/gungahlin-803"
+    "url": "https://www.coles.com.au/find-stores/coles/act/gungahlin-803",
+    "lat": -35.186052,
+    "lng": 149.135792,
+    "address": "Hibberson St & Gungahlin Place",
+    "suburb": "Gungahlin",
+    "postcode": "2912",
+    "phone": "(02) 6123 4500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 4785,
