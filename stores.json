@@ -397,31 +397,107 @@
     "id": 4577,
     "name": "Banora Point",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/banora-point-4577"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/banora-point-4577",
+    "lat": -28.213609,
+    "lng": 153.521894,
+    "address": "Fraser Drv & Leisure Drv",
+    "suburb": "Banora Point",
+    "postcode": "2486",
+    "phone": "(07) 5506 3900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 904,
     "name": "Bateau Bay",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bateau-bay-904"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bateau-bay-904",
+    "lat": -33.374859,
+    "lng": 151.472457,
+    "address": "The Entrance Rd",
+    "suburb": "Bateau Bay",
+    "postcode": "2261",
+    "phone": "(02) 4334 5388",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 811,
     "name": "Batemans Bay",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/batemans-bay-811"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/batemans-bay-811",
+    "lat": -35.706692,
+    "lng": 150.175888,
+    "address": "Vesper St & Princes Hwy",
+    "suburb": "Batemans Bay",
+    "postcode": "2536",
+    "phone": "(02) 4472 1913",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 836,
     "name": "Bathurst",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bathurst-836"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bathurst-836",
+    "lat": -33.416376,
+    "lng": 149.582316,
+    "address": "47 William St",
+    "suburb": "Bathurst",
+    "postcode": "2795",
+    "phone": "(02) 6334 6200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "7am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 10pm"
+      }
+    ]
   },
   {
     "id": 851,
     "name": "Baulkham Hills",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/baulkham-hills-851"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/baulkham-hills-851",
+    "lat": -33.733016,
+    "lng": 150.962023,
+    "address": "Norwest Boulevard",
+    "suburb": "Baulkham Hills",
+    "postcode": "2153",
+    "phone": "(02) 7966 6800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "6am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 10pm"
+      }
+    ]
   },
   {
     "id": 951,
