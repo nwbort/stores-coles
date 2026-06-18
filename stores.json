@@ -503,31 +503,111 @@
     "id": 951,
     "name": "Baulkham Hills",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/baulkham-hills-951"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/baulkham-hills-951",
+    "lat": -33.758987,
+    "lng": 150.991129,
+    "address": "Windsor Rd & Olive St",
+    "suburb": "Baulkham Hills",
+    "postcode": "2153",
+    "phone": "(02) 7811 6200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 739,
     "name": "Bega",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bega-739"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bega-739",
+    "lat": -36.674963,
+    "lng": 149.845138,
+    "address": "Parker St & Carp St",
+    "suburb": "Bega",
+    "postcode": "2550",
+    "phone": "(02) 6492 2233",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sat-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 823,
     "name": "Belmont",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/belmont-823"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/belmont-823",
+    "lat": -33.034734,
+    "lng": 151.65891,
+    "address": "Macquarie St & Edgar St",
+    "suburb": "Belmont",
+    "postcode": "2280",
+    "phone": "(02) 4945 0355",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 4178,
     "name": "Belmont North",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/belmont-north-4178"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/belmont-north-4178",
+    "lat": -33.012915,
+    "lng": 151.684313,
+    "address": "Ntaba Rd",
+    "suburb": "Belmont North",
+    "postcode": "2280",
+    "phone": "(02) 4948 5744",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 9pm"
+      }
+    ]
   },
   {
     "id": 4387,
     "name": "Berkeley",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/berkeley-4387"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/berkeley-4387",
+    "lat": -34.480423,
+    "lng": 150.845859,
+    "address": "65 Winnima Way",
+    "suburb": "Berkeley",
+    "postcode": "2506",
+    "phone": "(02) 4222 1000",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "7am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 929,
