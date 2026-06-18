@@ -4,20 +4,23 @@ Enrich stores.json with address, coordinates, phone, and trading hours
 fetched from individual store pages.
 
 Usage:
-  python3 enrich_stores.py [--limit N] [--delay SECONDS]
+  python3 enrich_stores.py [--force] [--workers N] [--limit N]
 
 Options:
-  --limit N       Only process first N stores (for testing)
-  --delay SECONDS Sleep between requests (default: 0.5)
+  --force       Re-enrich all stores, not just new ones
+  --workers N   Concurrent requests (default: 5)
+  --limit N     Only process first N stores (for testing)
 """
 
 import sys
 import json
-import time
 import argparse
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from extract_store import extract
 
 STORES_FILE = 'stores.json'
+SAVE_INTERVAL = 50
 
 
 def load_stores():
@@ -28,57 +31,71 @@ def load_stores():
 def save_stores(stores):
     with open(STORES_FILE, 'w') as f:
         json.dump(stores, f, indent=2)
-    print(f"Saved {len(stores)} stores to {STORES_FILE}")
+    print(f"  -> saved {STORES_FILE}", flush=True)
 
 
-def needs_enrichment(store):
-    return 'lat' not in store
+def fetch_one(store):
+    try:
+        info = extract(store['url'])
+        return store['id'], info, None
+    except Exception as e:
+        return store['id'], None, str(e)
 
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument('--force', action='store_true', help='Re-enrich all stores')
+    parser.add_argument('--workers', type=int, default=5, help='Concurrent requests')
     parser.add_argument('--limit', type=int, default=None, help='Max stores to process')
-    parser.add_argument('--delay', type=float, default=0.5, help='Delay between requests (s)')
     args = parser.parse_args()
 
     stores = load_stores()
-    to_enrich = [s for s in stores if needs_enrichment(s)]
+    store_by_id = {s['id']: s for s in stores}
+
+    if args.force:
+        to_enrich = list(stores)
+    else:
+        to_enrich = [s for s in stores if 'lat' not in s]
 
     if args.limit is not None:
         to_enrich = to_enrich[:args.limit]
 
     total = len(to_enrich)
-    print(f"{len(stores)} total stores, {total} need enrichment")
+    mode = 'full re-enrich' if args.force else 'new stores only'
+    print(f"{len(stores)} total stores, {total} to enrich ({mode}, {args.workers} workers)")
+
+    if total == 0:
+        print("Nothing to do.")
+        return
 
     ok = 0
     failed = 0
+    done = 0
+    lock = threading.Lock()
 
-    for i, store in enumerate(to_enrich, 1):
-        url = store['url']
-        print(f"[{i}/{total}] {store['state']} {store['name']} ...", end=' ', flush=True)
+    with ThreadPoolExecutor(max_workers=args.workers) as executor:
+        futures = {executor.submit(fetch_one, store): store for store in to_enrich}
 
-        try:
-            info = extract(url)
-            if info:
-                store.update({k: v for k, v in info.items() if k != 'source'})
-                print(f"ok ({info.get('source', '?')})")
-                ok += 1
-            else:
-                print("no data found")
-                failed += 1
-        except Exception as e:
-            print(f"ERROR: {e}")
-            failed += 1
+        for future in as_completed(futures):
+            store_id, info, error = future.result()
+            store = store_by_id[store_id]
 
-        # Save every 50 stores so progress isn't lost if the job is interrupted
-        if i % 50 == 0:
-            save_stores(stores)
+            with lock:
+                done += 1
+                if info:
+                    store.update({k: v for k, v in info.items() if k != 'source'})
+                    print(f"[{done}/{total}] {store['state']} {store['name']} ok", flush=True)
+                    ok += 1
+                else:
+                    msg = error or 'no data'
+                    print(f"[{done}/{total}] {store['state']} {store['name']} FAIL: {msg}", flush=True)
+                    failed += 1
 
-        if i < total and args.delay > 0:
-            time.sleep(args.delay)
+                if done % SAVE_INTERVAL == 0:
+                    save_stores(stores)
 
     save_stores(stores)
-    print(f"\nDone: {ok} enriched, {failed} failed")
+    print(f"\nDone: {ok} enriched, {failed} failed out of {total}")
 
 
 if __name__ == '__main__':

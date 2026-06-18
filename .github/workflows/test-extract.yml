@@ -27,7 +27,7 @@ jobs:
 
     - name: Test enrich on first 5 stores
       run: |
-        python3 enrich_stores.py --limit 5 --delay 1
+        python3 enrich_stores.py --limit 5 --workers 3
 
     - name: Show enriched output
       run: |
