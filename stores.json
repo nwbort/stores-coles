@@ -613,25 +613,73 @@
     "id": 929,
     "name": "Berowra Heights",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/berowra-heights-929"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/berowra-heights-929",
+    "lat": -33.61281,
+    "lng": 151.138301,
+    "address": "1 Turner Rd",
+    "suburb": "Berowra Heights",
+    "postcode": "2082",
+    "phone": "(02) 9456 2513",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 862,
     "name": "Blacktown",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/blacktown-862"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/blacktown-862",
+    "lat": -33.769857,
+    "lng": 150.905935,
+    "address": "17 Patrick St",
+    "suburb": "Blacktown",
+    "postcode": "2148",
+    "phone": "(02) 8652 8900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 809,
     "name": "Bondi Junction",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bondi-junction-809"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bondi-junction-809",
+    "lat": -33.892883,
+    "lng": 151.248066,
+    "address": "Spring St & Newland St",
+    "suburb": "Bondi Junction",
+    "postcode": "2022",
+    "phone": "(02) 8362 2100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 11pm"
+      }
+    ]
   },
   {
     "id": 853,
     "name": "Bondi Junction",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bondi-junction-853"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bondi-junction-853",
+    "lat": -33.893048,
+    "lng": 151.25085,
+    "address": "500 Oxford Street",
+    "suburb": "Bondi Junction",
+    "postcode": "2022",
+    "phone": "(02) 8383 4800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 11pm"
+      }
+    ]
   },
   {
     "id": 5771,
