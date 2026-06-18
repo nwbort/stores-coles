@@ -1,47 +1,48 @@
 #!/usr/bin/env python3
 """
-Merge two enriched stores.json files into one.
+Merge N enriched stores.json files into one output file.
 
-For each store, prefer an enriched version (has 'lat') from either file.
-If both files enriched the same store, top_file wins.
+For each store, the first input file that has an enriched version (has 'lat')
+wins. Stores not enriched in any input fall back to the version from the
+first input file.
 
-Usage: python3 merge_stores.py <top_file> <bottom_file> <output_file>
+Usage: python3 merge_stores.py <output_file> <input1> [<input2> ...]
 """
 
 import json
 import sys
 
 
-def merge(top_file, bottom_file, output_file):
-    with open(top_file) as f:
-        top_stores = json.load(f)
-    with open(bottom_file) as f:
-        bottom_stores = json.load(f)
+def merge(output_file, input_files):
+    if not input_files:
+        print('No input files provided.')
+        sys.exit(1)
 
-    bottom_by_id = {s['id']: s for s in bottom_stores}
+    chunks = []
+    for path in input_files:
+        with open(path) as f:
+            chunks.append(json.load(f))
+
+    base = chunks[0]
+    by_id = [{s['id']: s for s in chunk} for chunk in chunks]
 
     merged = []
-    for store in top_stores:
-        bottom = bottom_by_id.get(store['id'], store)
-        if 'lat' in store:
-            merged.append(store)
-        elif 'lat' in bottom:
-            merged.append(bottom)
-        else:
-            merged.append(store)
+    for store in base:
+        sid = store['id']
+        winner = next((lookup[sid] for lookup in by_id if 'lat' in lookup.get(sid, {})), None)
+        merged.append(winner if winner is not None else store)
 
     with open(output_file, 'w') as f:
         json.dump(merged, f, indent=2)
 
-    top_enriched = sum(1 for s in top_stores if 'lat' in s)
-    bottom_enriched = sum(1 for s in bottom_stores if 'lat' in s)
+    per_chunk = [sum(1 for s in chunk if 'lat' in s) for chunk in chunks]
     merged_enriched = sum(1 for s in merged if 'lat' in s)
-    print(f'Top: {top_enriched} enriched, Bottom: {bottom_enriched} enriched, '
-          f'Merged: {merged_enriched}/{len(merged)} total enriched')
+    chunk_summary = ', '.join(f'chunk {i}: {n}' for i, n in enumerate(per_chunk))
+    print(f'{chunk_summary} -> merged: {merged_enriched}/{len(merged)} enriched')
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
-        print(f'Usage: {sys.argv[0]} <top_file> <bottom_file> <output_file>')
+    if len(sys.argv) < 3:
+        print(f'Usage: {sys.argv[0]} <output_file> <input1> [<input2> ...]')
         sys.exit(1)
-    merge(sys.argv[1], sys.argv[2], sys.argv[3])
+    merge(sys.argv[1], sys.argv[2:])

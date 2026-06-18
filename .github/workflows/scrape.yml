@@ -10,8 +10,15 @@ on:
         description: 'Force re-enrich all stores (ignores day-of-week check)'
         type: boolean
         default: false
+      enrich_chunks:
+        description: 'Number of parallel enrichment jobs'
+        type: number
+        default: 2
   schedule:
   - cron: '*/10 * * * *'
+
+env:
+  ENRICH_CHUNKS: ${{ inputs.enrich_chunks || 2 }}
 
 permissions:
   contents: write
@@ -20,6 +27,8 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     if: ${{ !github.event.repository.is_template }}
+    outputs:
+      chunk-matrix: ${{ steps.matrix.outputs.value }}
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python
@@ -30,15 +39,22 @@ jobs:
       run: |
         ./download.sh 'https://www.coles.com.au/sitemap/sitemap-stores.xml'
         ./convert.sh coles.com.au-sitemap-sitemap-stores.xml.xml stores.json
+    - name: Generate chunk matrix
+      id: matrix
+      run: |
+        python3 -c "import json; print('value=' + json.dumps(list(range($ENRICH_CHUNKS))))" >> $GITHUB_OUTPUT
     - name: Upload base stores.json
       uses: actions/upload-artifact@v4
       with:
         name: stores-base
         path: stores.json
 
-  enrich-top:
+  enrich:
     needs: setup
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        chunk: ${{ fromJson(needs.setup.outputs.chunk-matrix) }}
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python
@@ -50,56 +66,26 @@ jobs:
       with:
         name: stores-base
         path: .
-    - name: Enrich stores from top
+    - name: Enrich stores (chunk ${{ matrix.chunk }}/${{ env.ENRICH_CHUNKS }})
       run: |
+        FLAGS="--chunk ${{ matrix.chunk }}/$ENRICH_CHUNKS"
         if [ "${ENRICH_FORCE}" = "1" ] || [ "$(date +%u)" = "7" ]; then
-          echo "Full enrichment run (top-down)"
-          python3 enrich_stores.py --force
+          echo "Full enrichment run (chunk ${{ matrix.chunk }}/$ENRICH_CHUNKS)"
+          python3 enrich_stores.py --force $FLAGS
         else
-          echo "Incremental enrichment run (top-down)"
-          python3 enrich_stores.py
+          echo "Incremental enrichment run (chunk ${{ matrix.chunk }}/$ENRICH_CHUNKS)"
+          python3 enrich_stores.py $FLAGS
         fi
       env:
         ENRICH_FORCE: ${{ inputs.full_enrich == true && '1' || '0' }}
-    - name: Upload top-enriched stores.json
+    - name: Upload enriched stores.json
       uses: actions/upload-artifact@v4
       with:
-        name: stores-top
-        path: stores.json
-
-  enrich-bottom:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.12"
-    - name: Download base stores.json
-      uses: actions/download-artifact@v4
-      with:
-        name: stores-base
-        path: .
-    - name: Enrich stores from bottom
-      run: |
-        if [ "${ENRICH_FORCE}" = "1" ] || [ "$(date +%u)" = "7" ]; then
-          echo "Full enrichment run (bottom-up)"
-          python3 enrich_stores.py --force --reverse
-        else
-          echo "Incremental enrichment run (bottom-up)"
-          python3 enrich_stores.py --reverse
-        fi
-      env:
-        ENRICH_FORCE: ${{ inputs.full_enrich == true && '1' || '0' }}
-    - name: Upload bottom-enriched stores.json
-      uses: actions/upload-artifact@v4
-      with:
-        name: stores-bottom
+        name: stores-chunk-${{ matrix.chunk }}
         path: stores.json
 
   merge:
-    needs: [enrich-top, enrich-bottom]
+    needs: enrich
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -107,23 +93,19 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: "3.12"
-    - name: Download enriched stores (top)
+    - name: Download all chunk artifacts
       uses: actions/download-artifact@v4
       with:
-        name: stores-top
-        path: stores-top
-    - name: Download enriched stores (bottom)
-      uses: actions/download-artifact@v4
-      with:
-        name: stores-bottom
-        path: stores-bottom
+        pattern: stores-chunk-*
+        path: /tmp/chunks
+        merge-multiple: false
     - name: Merge stores
-      run: python3 merge_stores.py stores-top/stores.json stores-bottom/stores.json stores.json
+      run: python3 merge_stores.py stores.json /tmp/chunks/stores-chunk-*/stores.json
     - name: Commit and push
       run: |-
         git config user.name "Automated"
         git config user.email "actions@users.noreply.github.com"
-        git add -A
+        git add stores.json
         timestamp=$(date -u)
         git commit -m "${timestamp}" || exit 0
         git pull --rebase

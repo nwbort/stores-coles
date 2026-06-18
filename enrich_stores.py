@@ -79,24 +79,36 @@ def main():
     parser.add_argument('--delay', type=float, default=2.0,
                         help='Min seconds between requests globally (default: 2.0)')
     parser.add_argument('--limit', type=int, default=None, help='Max stores to process')
-    parser.add_argument('--reverse', action='store_true',
-                        help='Process stores in reverse order (bottom-up)')
+    parser.add_argument('--chunk', default=None, metavar='INDEX/TOTAL',
+                        help='Process a slice of stores, e.g. --chunk 2/5 for the third of five chunks')
     args = parser.parse_args()
+
+    chunk_index, chunk_total = None, None
+    if args.chunk:
+        try:
+            idx, total_chunks = args.chunk.split('/')
+            chunk_index, chunk_total = int(idx), int(total_chunks)
+            if not (0 <= chunk_index < chunk_total):
+                raise ValueError
+        except (ValueError, AttributeError):
+            parser.error('--chunk must be INDEX/TOTAL with 0 <= INDEX < TOTAL')
 
     stores = load_stores()
     store_by_id = {s['id']: s for s in stores}
 
     to_enrich = list(stores) if args.force else [s for s in stores if 'lat' not in s]
-    if args.reverse:
-        to_enrich = list(reversed(to_enrich))
+    if chunk_total is not None:
+        n = len(to_enrich)
+        size = (n + chunk_total - 1) // chunk_total
+        to_enrich = to_enrich[chunk_index * size:(chunk_index + 1) * size]
     if args.limit is not None:
         to_enrich = to_enrich[:args.limit]
 
     total = len(to_enrich)
-    direction = 'bottom-up' if args.reverse else 'top-down'
+    chunk_desc = f'chunk {chunk_index}/{chunk_total}' if chunk_total is not None else 'all'
     mode = 'full re-enrich' if args.force else 'new stores only'
     print(f'{len(stores)} total stores, {total} to enrich '
-          f'({mode}, {direction}, {args.workers} workers, {args.delay}s delay)')
+          f'({mode}, {chunk_desc}, {args.workers} workers, {args.delay}s delay)')
 
     if total == 0:
         print('Nothing to do.')
