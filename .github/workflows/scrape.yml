@@ -11,8 +11,7 @@ on:
         type: boolean
         default: false
   schedule:
-  # Daily at 6:23 AM UTC
-  - cron: '23 6 * * *'
+  - cron: '*/10 * * * *'
 
 permissions:
   contents: write
