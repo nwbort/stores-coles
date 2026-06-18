@@ -30,9 +30,9 @@ jobs:
     outputs:
       chunk-matrix: ${{ steps.matrix.outputs.value }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: "3.12"
     - name: Download sitemap and convert
@@ -44,7 +44,7 @@ jobs:
       run: |
         python3 -c "import json; print('value=' + json.dumps(list(range($ENRICH_CHUNKS))))" >> $GITHUB_OUTPUT
     - name: Upload base stores.json
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: stores-base
         path: stores.json
@@ -56,13 +56,13 @@ jobs:
       matrix:
         chunk: ${{ fromJson(needs.setup.outputs.chunk-matrix) }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: "3.12"
     - name: Download base stores.json
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v6
       with:
         name: stores-base
         path: .
@@ -79,7 +79,7 @@ jobs:
       env:
         ENRICH_FORCE: ${{ inputs.full_enrich == true && '1' || '0' }}
     - name: Upload enriched stores.json
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: stores-chunk-${{ matrix.chunk }}
         path: stores.json
@@ -88,13 +88,13 @@ jobs:
     needs: enrich
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: "3.12"
     - name: Download all chunk artifacts
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v6
       with:
         pattern: stores-chunk-*
         path: /tmp/chunks
