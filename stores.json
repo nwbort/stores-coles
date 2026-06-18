@@ -1261,31 +1261,99 @@
     "id": 703,
     "name": "Cooma",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/cooma-703"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/cooma-703",
+    "lat": -36.235937,
+    "lng": 149.126214,
+    "address": "85 - 91 Commissioner St",
+    "suburb": "Cooma",
+    "postcode": "2630",
+    "phone": "(02) 6455 3000",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 8pm"
+      }
+    ]
   },
   {
     "id": 890,
     "name": "Corrimal",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/corrimal-890"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/corrimal-890",
+    "lat": -34.371508,
+    "lng": 150.898079,
+    "address": "204 Princes Highway",
+    "suburb": "Corrimal",
+    "postcode": "2518",
+    "phone": "(02) 7203 8200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 5749,
     "name": "Cowra",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/cowra-5749"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/cowra-5749",
+    "lat": -33.834723,
+    "lng": 148.688984,
+    "address": "Kendall St & Macquarie St",
+    "suburb": "Cowra",
+    "postcode": "2794",
+    "phone": "(02) 6342 3283",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 8pm"
+      }
+    ]
   },
   {
     "id": 7577,
     "name": "Crows Nest",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/crows-nest-7577"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/crows-nest-7577",
+    "lat": -33.823112,
+    "lng": 151.201096,
+    "address": "101-110 Willoughby Road",
+    "suburb": "Crows Nest",
+    "postcode": "2065",
+    "phone": "(02) 7955 9100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 11pm"
+      }
+    ]
   },
   {
     "id": 778,
     "name": "Dapto",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/dapto-778"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/dapto-778",
+    "lat": -34.494529,
+    "lng": 150.795182,
+    "address": "75 - 87 Princes Hwy",
+    "suburb": "Dapto",
+    "postcode": "2530",
+    "phone": "(02) 4258 5200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 944,
@@ -1735,31 +1803,91 @@
     "id": 737,
     "name": "Maroubra",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/maroubra-737"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/maroubra-737",
+    "lat": -33.940481,
+    "lng": 151.237811,
+    "address": "737 Anzac Parade",
+    "suburb": "Maroubra",
+    "postcode": "2035",
+    "phone": "(02) 9179 5900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 11pm"
+      }
+    ]
   },
   {
     "id": 4166,
     "name": "Marrickville",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/marrickville-4166"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/marrickville-4166",
+    "lat": -33.907295,
+    "lng": 151.172133,
+    "address": "51-55 Edinburgh Road",
+    "suburb": "Marrickville",
+    "postcode": "2204",
+    "phone": "(02) 8327 8300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 5798,
     "name": "Mayfield",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/mayfield-5798"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/mayfield-5798",
+    "lat": -32.901117,
+    "lng": 151.742161,
+    "address": "Maitland Rd & Nile St",
+    "suburb": "Mayfield",
+    "postcode": "2304",
+    "phone": "(02) 8327 8400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 10pm"
+      }
+    ]
   },
   {
     "id": 7555,
     "name": "Medowie",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/medowie-7555"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/medowie-7555",
+    "lat": -32.739975,
+    "lng": 151.86483,
+    "address": "Ferodale Road & Medowie Road",
+    "suburb": "Medowie",
+    "postcode": "2318",
+    "phone": "(02) 4982 9600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 5793,
     "name": "Merrylands",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/merrylands-5793"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/merrylands-5793",
+    "lat": -33.834581,
+    "lng": 150.990835,
+    "address": "4 Mcfarlane St",
+    "suburb": "Merrylands",
+    "postcode": "2160",
+    "phone": "(02) 8868 1200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 790,
@@ -2319,31 +2447,95 @@
     "id": 5698,
     "name": "Thirroul",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/thirroul-5698"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/thirroul-5698",
+    "lat": -34.315327,
+    "lng": 150.921733,
+    "address": "282 Lawrence Hargrave Drive",
+    "suburb": "Thirroul",
+    "postcode": "2515",
+    "phone": "(02) 4267 1587",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 5690,
     "name": "Thornton",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/thornton-5690"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/thornton-5690",
+    "lat": -32.777006,
+    "lng": 151.639069,
+    "address": "Taylor Ave & Thomas Cooke Dve",
+    "suburb": "Thornton",
+    "postcode": "2322",
+    "phone": "(02) 5730 2110",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 9pm"
+      }
+    ]
   },
   {
     "id": 5828,
     "name": "Thurgoona",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/thurgoona-5828"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/thurgoona-5828",
+    "lat": -36.04463,
+    "lng": 146.99661,
+    "address": "30 Diamond Dr",
+    "suburb": "Thurgoona",
+    "postcode": "2640",
+    "phone": "(02) 6048 2700",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 5682,
     "name": "Toormina",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/toormina-5682"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/toormina-5682",
+    "lat": -30.354203,
+    "lng": 153.091414,
+    "address": "Toormina Rd & Minorie Dr",
+    "suburb": "Toormina",
+    "postcode": "2452",
+    "phone": "(02) 6659 6500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 850,
     "name": "Toronto",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/toronto-850"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/toronto-850",
+    "lat": -33.013037,
+    "lng": 151.595078,
+    "address": "63 The Boulevarde",
+    "suburb": "Toronto",
+    "postcode": "2283",
+    "phone": "(02) 4080 2500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "6am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 781,
@@ -2793,31 +2985,119 @@
     "id": 4536,
     "name": "Cairns",
     "state": "QLD",
-    "url": "https://www.coles.com.au/find-stores/coles/qld/cairns-4536"
+    "url": "https://www.coles.com.au/find-stores/coles/qld/cairns-4536",
+    "lat": -16.924186,
+    "lng": 145.77053,
+    "address": "Mcleod St & Aplin St",
+    "suburb": "Cairns",
+    "postcode": "4870",
+    "phone": "(07) 4040 7400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "7am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 4478,
     "name": "Caloundra",
     "state": "QLD",
-    "url": "https://www.coles.com.au/find-stores/coles/qld/caloundra-4478"
+    "url": "https://www.coles.com.au/find-stores/coles/qld/caloundra-4478",
+    "lat": -26.802623,
+    "lng": 153.124466,
+    "address": "47 Bowman Rd",
+    "suburb": "Caloundra",
+    "postcode": "4551",
+    "phone": "(07) 5374 6200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 6pm"
+      }
+    ]
   },
   {
     "id": 4464,
     "name": "Cannon Hill",
     "state": "QLD",
-    "url": "https://www.coles.com.au/find-stores/coles/qld/cannon-hill-4464"
+    "url": "https://www.coles.com.au/find-stores/coles/qld/cannon-hill-4464",
+    "lat": -27.471571,
+    "lng": 153.097686,
+    "address": "Creek Rd & Wynnum Rd",
+    "suburb": "Cannon Hill",
+    "postcode": "4170",
+    "phone": "(07) 3183 5500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 6pm"
+      }
+    ]
   },
   {
     "id": 4598,
     "name": "Cannonvale",
     "state": "QLD",
-    "url": "https://www.coles.com.au/find-stores/coles/qld/cannonvale-4598"
+    "url": "https://www.coles.com.au/find-stores/coles/qld/cannonvale-4598",
+    "lat": -20.277551,
+    "lng": 148.699182,
+    "address": "Shute Harbour Rd & Island Dr",
+    "suburb": "Cannonvale",
+    "postcode": "4802",
+    "phone": "(07) 4946 4869",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "8am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "8am - 6pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 6pm"
+      }
+    ]
   },
   {
     "id": 4509,
     "name": "Capalaba",
     "state": "QLD",
-    "url": "https://www.coles.com.au/find-stores/coles/qld/capalaba-4509"
+    "url": "https://www.coles.com.au/find-stores/coles/qld/capalaba-4509",
+    "lat": -27.525295,
+    "lng": 153.191805,
+    "address": "Redland Bay Rd & Mt Cotton Rd",
+    "suburb": "Capalaba",
+    "postcode": "4157",
+    "phone": "(07) 3900 7500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 6pm"
+      }
+    ]
   },
   {
     "id": 4574,
@@ -3381,31 +3661,123 @@
     "id": 4645,
     "name": "Newtown",
     "state": "QLD",
-    "url": "https://www.coles.com.au/find-stores/coles/qld/newtown-4645"
+    "url": "https://www.coles.com.au/find-stores/coles/qld/newtown-4645",
+    "lat": -27.565392,
+    "lng": 151.930776,
+    "address": "Cnr Anzac Av & James St",
+    "suburb": "Newtown",
+    "postcode": "4350",
+    "phone": "(07) 4615 0500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "8am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "8am - 6pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 6pm"
+      }
+    ]
   },
   {
     "id": 4782,
     "name": "Newtown",
     "state": "QLD",
-    "url": "https://www.coles.com.au/find-stores/coles/qld/newtown-4782"
+    "url": "https://www.coles.com.au/find-stores/coles/qld/newtown-4782",
+    "lat": -27.620616,
+    "lng": 152.779784,
+    "address": "83/81 Blackstone Rd",
+    "suburb": "Newtown",
+    "postcode": "4304",
+    "phone": "(07) 3069 5600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 6pm"
+      }
+    ]
   },
   {
     "id": 4447,
     "name": "Noosa Heads",
     "state": "QLD",
-    "url": "https://www.coles.com.au/find-stores/coles/qld/noosa-heads-4447"
+    "url": "https://www.coles.com.au/find-stores/coles/qld/noosa-heads-4447",
+    "lat": -26.398552,
+    "lng": 153.089076,
+    "address": "Lanyana Way",
+    "suburb": "Noosa Heads",
+    "postcode": "4567",
+    "phone": "(07) 5343 1200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 6pm"
+      }
+    ]
   },
   {
     "id": 4596,
     "name": "North Ipswich",
     "state": "QLD",
-    "url": "https://www.coles.com.au/find-stores/coles/qld/north-ipswich-4596"
+    "url": "https://www.coles.com.au/find-stores/coles/qld/north-ipswich-4596",
+    "lat": -27.608109,
+    "lng": 152.757578,
+    "address": "The Terrace",
+    "suburb": "North Ipswich",
+    "postcode": "4305",
+    "phone": "(07) 2890 2100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Wed",
+        "storeTime": "7am - 8pm"
+      },
+      {
+        "daysOfWeek": "Thu",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Fri-Sat",
+        "storeTime": "7am - 8pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 6pm"
+      }
+    ]
   },
   {
     "id": 4545,
     "name": "North Lakes",
     "state": "QLD",
-    "url": "https://www.coles.com.au/find-stores/coles/qld/north-lakes-4545"
+    "url": "https://www.coles.com.au/find-stores/coles/qld/north-lakes-4545",
+    "lat": -27.243093,
+    "lng": 153.018885,
+    "address": "North Lakes Dr & Anzac Ave",
+    "suburb": "North Lakes",
+    "postcode": "4509",
+    "phone": "(07) 3491 5700",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 6pm"
+      }
+    ]
   },
   {
     "id": 4419,
@@ -3855,31 +4227,131 @@
     "id": 445,
     "name": "Bridgewater",
     "state": "SA",
-    "url": "https://www.coles.com.au/find-stores/coles/sa/bridgewater-445"
+    "url": "https://www.coles.com.au/find-stores/coles/sa/bridgewater-445",
+    "lat": -35.009239,
+    "lng": 138.75968,
+    "address": "Carey Gulley Rd",
+    "suburb": "Bridgewater",
+    "postcode": "5155",
+    "phone": "(08) 7321 1800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "7am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 5pm"
+      }
+    ]
   },
   {
     "id": 4933,
     "name": "Christies Beach",
     "state": "SA",
-    "url": "https://www.coles.com.au/find-stores/coles/sa/christies-beach-4933"
+    "url": "https://www.coles.com.au/find-stores/coles/sa/christies-beach-4933",
+    "lat": -35.138757,
+    "lng": 138.480757,
+    "address": "101 Beach Rd",
+    "suburb": "Christies Beach",
+    "postcode": "5165",
+    "phone": "(08) 8488 2400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "7am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 5pm"
+      }
+    ]
   },
   {
     "id": 4921,
     "name": "Craigmore",
     "state": "SA",
-    "url": "https://www.coles.com.au/find-stores/coles/sa/craigmore-4921"
+    "url": "https://www.coles.com.au/find-stores/coles/sa/craigmore-4921",
+    "lat": -34.70865,
+    "lng": 138.704976,
+    "address": "Yorktown Road",
+    "suburb": "Craigmore",
+    "postcode": "5114",
+    "phone": "(08) 8286 8000",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "6am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 5pm"
+      }
+    ]
   },
   {
     "id": 408,
     "name": "Dernancourt",
     "state": "SA",
-    "url": "https://www.coles.com.au/find-stores/coles/sa/dernancourt-408"
+    "url": "https://www.coles.com.au/find-stores/coles/sa/dernancourt-408",
+    "lat": -34.862261,
+    "lng": 138.682428,
+    "address": "Lower North East Rd",
+    "suburb": "Dernancourt",
+    "postcode": "5075",
+    "phone": "(08) 8168 7300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "6am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 5pm"
+      }
+    ]
   },
   {
     "id": 452,
     "name": "Edwardstown",
     "state": "SA",
-    "url": "https://www.coles.com.au/find-stores/coles/sa/edwardstown-452"
+    "url": "https://www.coles.com.au/find-stores/coles/sa/edwardstown-452",
+    "lat": -34.981802,
+    "lng": 138.572847,
+    "address": "992 South Rd",
+    "suburb": "Edwardstown",
+    "postcode": "5039",
+    "phone": "(08) 7427 4500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "7am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 5pm"
+      }
+    ]
   },
   {
     "id": 462,
@@ -4419,31 +4891,91 @@
     "id": 7731,
     "name": "Berwick",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/berwick-7731"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/berwick-7731",
+    "lat": -38.014203,
+    "lng": 145.322069,
+    "address": "215 - 225 Parkhill Drive",
+    "suburb": "Berwick",
+    "postcode": "3806",
+    "phone": "(03) 8794 5100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 10pm"
+      }
+    ]
   },
   {
     "id": 7695,
     "name": "Berwick",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/berwick-7695"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/berwick-7695",
+    "lat": -38.031978,
+    "lng": 145.344894,
+    "address": "2 Richardson Grove",
+    "suburb": "Berwick",
+    "postcode": "3806",
+    "phone": "(03) 8768 5400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 544,
     "name": "Berwick South",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/berwick-south-544"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/berwick-south-544",
+    "lat": -38.061105,
+    "lng": 145.339593,
+    "address": "Corner Of O'shea Rd And Clyde Rd",
+    "suburb": "Berwick South",
+    "postcode": "3806",
+    "phone": "(03) 9703 9300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 11pm"
+      }
+    ]
   },
   {
     "id": 7721,
     "name": "Blackburn North",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/blackburn-north-7721"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/blackburn-north-7721",
+    "lat": -37.811272,
+    "lng": 145.1535,
+    "address": "Corner Of Springfield & Williams Rds",
+    "suburb": "Blackburn North",
+    "postcode": "3130",
+    "phone": "(03) 8863 8200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 601,
     "name": "Boronia",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/boronia-601"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/boronia-601",
+    "lat": -37.861271,
+    "lng": 145.28723,
+    "address": "Floriston Rd & Chandler Rd",
+    "suburb": "Boronia",
+    "postcode": "3155",
+    "phone": "(03) 9139 9700",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 10pm"
+      }
+    ]
   },
   {
     "id": 7733,
@@ -4893,31 +5425,91 @@
     "id": 4854,
     "name": "Glen Iris",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/glen-iris-4854"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/glen-iris-4854",
+    "lat": -37.848807,
+    "lng": 145.076599,
+    "address": "2 Summerhill Rd",
+    "suburb": "Glen Iris",
+    "postcode": "3146",
+    "phone": "(03) 7078 6900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 508,
     "name": "Glen Waverley",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/glen-waverley-508"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/glen-waverley-508",
+    "lat": -37.876841,
+    "lng": 145.164582,
+    "address": "Springvale Rd & High St",
+    "suburb": "Glen Waverley",
+    "postcode": "3150",
+    "phone": "(03) 7505 3100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 639,
     "name": "Glenroy",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/glenroy-639"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/glenroy-639",
+    "lat": -37.705958,
+    "lng": 144.916244,
+    "address": "Glenroy Rd & Morgan Crt",
+    "suburb": "Glenroy",
+    "postcode": "3046",
+    "phone": "(03) 7040 9700",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 657,
     "name": "Greensborough",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/greensborough-657"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/greensborough-657",
+    "lat": -37.70244,
+    "lng": 145.102789,
+    "address": "25 Main St",
+    "suburb": "Greensborough",
+    "postcode": "3088",
+    "phone": "(03) 9084 2600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 608,
     "name": "Greenvale",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/greenvale-608"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/greenvale-608",
+    "lat": -37.639278,
+    "lng": 144.881291,
+    "address": "1 - 11 Greenvale Drv",
+    "suburb": "Greenvale",
+    "postcode": "3059",
+    "phone": "(03) 9333 9400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 11pm"
+      }
+    ]
   },
   {
     "id": 7716,
@@ -5367,31 +5959,91 @@
     "id": 7881,
     "name": "Ringwood",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/ringwood-7881"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/ringwood-7881",
+    "lat": -37.81181,
+    "lng": 145.229972,
+    "address": "Maroondah Hwy & Warrandyte Rd",
+    "suburb": "Ringwood",
+    "postcode": "3134",
+    "phone": "(03) 8864 4600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 7782,
     "name": "Ringwood East",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/ringwood-east-7782"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/ringwood-east-7782",
+    "lat": -37.796822,
+    "lng": 145.256686,
+    "address": "434 Maroondah Hwy",
+    "suburb": "Ringwood East",
+    "postcode": "3136",
+    "phone": "(03) 8863 5900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 7844,
     "name": "Rockbank",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/rockbank-7844"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/rockbank-7844",
+    "lat": -37.723305,
+    "lng": 144.670106,
+    "address": "Woodlea Devlopment",
+    "suburb": "Rockbank",
+    "postcode": "3335",
+    "phone": "(03) 7031 4800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 4045,
     "name": "Romsey",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/romsey-4045"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/romsey-4045",
+    "lat": -37.353956,
+    "lng": 144.742795,
+    "address": "51-53 Main St",
+    "suburb": "Romsey",
+    "postcode": "3434",
+    "phone": "(03) 8393 7400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 696,
     "name": "Rosebud",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/rosebud-696"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/rosebud-696",
+    "lat": -38.361353,
+    "lng": 144.890575,
+    "address": "Boneo Rd & Mccombe St",
+    "suburb": "Rosebud",
+    "postcode": "3939",
+    "phone": "(03) 5999 8800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 697,
@@ -5841,31 +6493,131 @@
     "id": 488,
     "name": "Casuarina",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/casuarina-488"
+    "url": "https://www.coles.com.au/find-stores/coles/wa/casuarina-488",
+    "lat": -32.245302,
+    "lng": 115.8138,
+    "address": "4 Chisham Avenue &, Cnr Gilmore Ave",
+    "suburb": "Casuarina",
+    "postcode": "6167",
+    "phone": "(08) 6399 8800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "8am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "8am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "11am - 5pm"
+      }
+    ]
   },
   {
     "id": 262,
     "name": "Caversham",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/caversham-262"
+    "url": "https://www.coles.com.au/find-stores/coles/wa/caversham-262",
+    "lat": -31.867661,
+    "lng": 115.96723,
+    "address": "175 Suffolk St",
+    "suburb": "Caversham",
+    "postcode": "6055",
+    "phone": "(08) 6165 5900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "8am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "8am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "11am - 5pm"
+      }
+    ]
   },
   {
     "id": 299,
     "name": "Claremont",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/claremont-299"
+    "url": "https://www.coles.com.au/find-stores/coles/wa/claremont-299",
+    "lat": -31.98223,
+    "lng": 115.779357,
+    "address": "Claras Lane & Gugeri St",
+    "suburb": "Claremont",
+    "postcode": "6010",
+    "phone": "(08) 9286 7600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "8am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "8am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "11am - 5pm"
+      }
+    ]
   },
   {
     "id": 375,
     "name": "Clarkson",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/clarkson-375"
+    "url": "https://www.coles.com.au/find-stores/coles/wa/clarkson-375",
+    "lat": -31.690169,
+    "lng": 115.71727,
+    "address": "Ocean Keys Bvd & Key Largo Drv",
+    "suburb": "Clarkson",
+    "postcode": "6030",
+    "phone": "(08) 6402 4800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "8am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "8am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "11am - 5pm"
+      }
+    ]
   },
   {
     "id": 4824,
     "name": "Cloverdale",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/cloverdale-4824"
+    "url": "https://www.coles.com.au/find-stores/coles/wa/cloverdale-4824",
+    "lat": -31.964239,
+    "lng": 115.934088,
+    "address": "227 Belmont Avenue",
+    "suburb": "Cloverdale",
+    "postcode": "6105",
+    "phone": "(08) 6247 6600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "8am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "8am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "11am - 5pm"
+      }
+    ]
   },
   {
     "id": 390,
