@@ -15321,13 +15321,37 @@
     "id": 542,
     "name": "Williamstown",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/williamstown-542"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/williamstown-542",
+    "lat": -37.85751,
+    "lng": 144.89691,
+    "address": "29 Douglas Pde",
+    "suburb": "Williamstown",
+    "postcode": "3016",
+    "phone": "(03) 8468 7700",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 10pm"
+      }
+    ]
   },
   {
     "id": 658,
     "name": "Wodonga",
     "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/wodonga-658"
+    "url": "https://www.coles.com.au/find-stores/coles/vic/wodonga-658",
+    "lat": -36.128426,
+    "lng": 146.864416,
+    "address": "99 Melrose Drv",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "(02) 6059 4900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 636,
@@ -16421,13 +16445,53 @@
     "id": 348,
     "name": "Erskine",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/erskine-348"
+    "url": "https://www.coles.com.au/find-stores/coles/wa/erskine-348",
+    "lat": -32.560682,
+    "lng": 115.688256,
+    "address": "36 Wattleglen Ave",
+    "suburb": "Erskine",
+    "postcode": "6210",
+    "phone": "(08) 9534 8656",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "8am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "8am - 6pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "10am - 5pm"
+      }
+    ]
   },
   {
     "id": 302,
     "name": "Floreat Park",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/floreat-park-302"
+    "url": "https://www.coles.com.au/find-stores/coles/wa/floreat-park-302",
+    "lat": -31.937583,
+    "lng": 115.79249,
+    "address": "1 Howtree Place",
+    "suburb": "Floreat Park",
+    "postcode": "6014",
+    "phone": "(08) 9285 7600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "8am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "8am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "11am - 5pm"
+      }
+    ]
   },
   {
     "id": 353,
