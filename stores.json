@@ -241,25 +241,81 @@
     "id": 693,
     "name": "Albury",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/albury-693"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/albury-693",
+    "lat": -36.0813,
+    "lng": 146.9137,
+    "address": "Townsend St & Smollet St",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "(02) 6048 9900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 8750,
     "name": "Alstonville",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/alstonville-8750"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/alstonville-8750",
+    "lat": -28.84233,
+    "lng": 153.440626,
+    "address": "Bruxner Hwy & Mains St",
+    "suburb": "Alstonville",
+    "postcode": "2477",
+    "phone": "(02) 6628 5186",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat-Sun",
+        "storeTime": "7am - 8pm"
+      }
+    ]
   },
   {
     "id": 8760,
     "name": "Armidale",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/armidale-8760"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/armidale-8760",
+    "lat": -30.51274,
+    "lng": 151.668683,
+    "address": "Dumaresq St & Marsh St",
+    "suburb": "Armidale",
+    "postcode": "2350",
+    "phone": "(02) 5701 7300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 8pm"
+      }
+    ]
   },
   {
     "id": 791,
     "name": "Ashfield",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/ashfield-791"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/ashfield-791",
+    "lat": -33.889879,
+    "lng": 151.124763,
+    "address": "Liverpool Rd & Knox St",
+    "suburb": "Ashfield",
+    "postcode": "2131",
+    "phone": "(02) 7263 3200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 11pm"
+      }
+    ]
   },
   {
     "id": 760,
