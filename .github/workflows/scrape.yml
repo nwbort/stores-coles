@@ -2,11 +2,16 @@ name: Scrape
 
 on:
   push:
+    branches:
+      - main
   workflow_dispatch:
+    inputs:
+      full_enrich:
+        description: 'Force re-enrich all stores (ignores day-of-week check)'
+        type: boolean
+        default: false
   schedule:
-  # Daily at 6:23 AM UTC
-  - cron: '23 6 * * *'
-  # For hourly at 42 minutes past the hour: '42 * * * *'
+  - cron: '*/10 * * * *'
 
 permissions:
   contents: write
@@ -29,19 +34,14 @@ jobs:
           chmod +x scrape.sh
           echo "Created scrape.sh"
           # And replace README.md
-          echo -e "# Scheduled scraper\n\nFor $REPO_DESC" > README.md 
+          echo -e "# Scheduled scraper\n\nFor $REPO_DESC" > README.md
         fi
       env:
         REPO_DESC: ${{ github.event.repository.description }}
-    # Uncomment to use Python:
-    # - name: Set up Python 3.13
-    #   uses: actions/setup-python@v5
-    #   with:
-    #     python-version: "3.13"
-    #     cache: "pip"
-    # - name: Install dependencies
-    #   run: |
-    #     pip install -r requirements.txt
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
     # Uncomment to use Playwright via shot-scraper (put shot-scraper in requirements.txt):
     # - name: Cache Playwright browsers
     #   uses: actions/cache@v4
@@ -54,6 +54,8 @@ jobs:
     - name: Run the scraper
       run: |
         ./scrape.sh
+      env:
+        ENRICH_FORCE: ${{ inputs.full_enrich == true && '1' || '0' }}
     - name: Commit and push
       run: |-
         git config user.name "Automated"

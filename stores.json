@@ -3,211 +3,683 @@
     "id": 5784,
     "name": "Amaroo",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/amaroo-5784"
+    "url": "https://www.coles.com.au/find-stores/coles/act/amaroo-5784",
+    "lat": -35.164593,
+    "lng": 149.131995,
+    "address": "Horse Park Dr",
+    "suburb": "Amaroo",
+    "postcode": "2914",
+    "phone": "(02) 6223 0500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 779,
     "name": "Belconnen",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/belconnen-779"
+    "url": "https://www.coles.com.au/find-stores/coles/act/belconnen-779",
+    "lat": -35.23788,
+    "lng": 149.064734,
+    "address": "Benjamin Way",
+    "suburb": "Belconnen",
+    "postcode": "2617",
+    "phone": "(02) 6256 1300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 4787,
     "name": "Canberra City",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/canberra-city-4787"
+    "url": "https://www.coles.com.au/find-stores/coles/act/canberra-city-4787",
+    "lat": -35.278028,
+    "lng": 149.134255,
+    "address": "Bunda St & Petrie St",
+    "suburb": "Canberra City",
+    "postcode": "2601",
+    "phone": "(02) 6276 2100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 858,
     "name": "Chisholm",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/chisholm-858"
+    "url": "https://www.coles.com.au/find-stores/coles/act/chisholm-858",
+    "lat": -35.413758,
+    "lng": 149.128133,
+    "address": "42 Halley St",
+    "suburb": "Chisholm",
+    "postcode": "2905",
+    "phone": "(02) 6298 5100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 735,
     "name": "Curtin",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/curtin-735"
+    "url": "https://www.coles.com.au/find-stores/coles/act/curtin-735",
+    "lat": -35.325584,
+    "lng": 149.082414,
+    "address": "51 Curtin Place",
+    "suburb": "Curtin",
+    "postcode": "2605",
+    "phone": "(02) 5156 6400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 4814,
     "name": "Dickson",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/dickson-4814"
+    "url": "https://www.coles.com.au/find-stores/coles/act/dickson-4814",
+    "lat": -35.249174,
+    "lng": 149.138702,
+    "address": "36 Badham Street",
+    "suburb": "Dickson",
+    "postcode": "2602",
+    "phone": "(02) 5122 5400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 859,
     "name": "Griffith",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/griffith-859"
+    "url": "https://www.coles.com.au/find-stores/coles/act/griffith-859",
+    "lat": -35.320835,
+    "lng": 149.134113,
+    "address": "Franklin Street & Flinders Way",
+    "suburb": "Griffith",
+    "postcode": "2603",
+    "phone": "(02) 6126 9600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 803,
     "name": "Gungahlin",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/gungahlin-803"
+    "url": "https://www.coles.com.au/find-stores/coles/act/gungahlin-803",
+    "lat": -35.186052,
+    "lng": 149.135792,
+    "address": "Hibberson St & Gungahlin Place",
+    "suburb": "Gungahlin",
+    "postcode": "2912",
+    "phone": "(02) 6123 4500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 4785,
     "name": "Kaleen Plaza",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/kaleen-plaza-4785"
+    "url": "https://www.coles.com.au/find-stores/coles/act/kaleen-plaza-4785",
+    "lat": -35.220297,
+    "lng": 149.10311,
+    "address": "1 Maribyrnong Ave",
+    "suburb": "Kaleen Plaza",
+    "postcode": "2617",
+    "phone": "(02) 6204 8700",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 748,
     "name": "Macquarie",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/macquarie-748"
+    "url": "https://www.coles.com.au/find-stores/coles/act/macquarie-748",
+    "lat": -35.253158,
+    "lng": 149.070363,
+    "address": "Bowman St",
+    "suburb": "Macquarie",
+    "postcode": "2614",
+    "phone": "(02) 6256 2200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 11pm"
+      }
+    ]
   },
   {
     "id": 848,
     "name": "Phillip",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/phillip-848"
+    "url": "https://www.coles.com.au/find-stores/coles/act/phillip-848",
+    "lat": -35.346777,
+    "lng": 149.085588,
+    "address": "Cnr Melrose & Hindmarsh Drives",
+    "suburb": "Phillip",
+    "postcode": "2606",
+    "phone": "(02) 6232 5569",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 911,
     "name": "Tuggeranong",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/tuggeranong-911"
+    "url": "https://www.coles.com.au/find-stores/coles/act/tuggeranong-911",
+    "lat": -35.417174,
+    "lng": 149.067212,
+    "address": "Pitman St & Ankertell St",
+    "suburb": "Tuggeranong",
+    "postcode": "2900",
+    "phone": "(02) 6293 2355",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 4786,
     "name": "Wanniassa",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/wanniassa-4786"
+    "url": "https://www.coles.com.au/find-stores/coles/act/wanniassa-4786",
+    "lat": -35.391072,
+    "lng": 149.086145,
+    "address": "12 Sangster Pl",
+    "suburb": "Wanniassa",
+    "postcode": "2903",
+    "phone": "(02) 6284 0400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 693,
     "name": "Albury",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/albury-693"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/albury-693",
+    "lat": -36.0813,
+    "lng": 146.9137,
+    "address": "Townsend St & Smollet St",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "(02) 6048 9900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 8750,
     "name": "Alstonville",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/alstonville-8750"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/alstonville-8750",
+    "lat": -28.84233,
+    "lng": 153.440626,
+    "address": "Bruxner Hwy & Mains St",
+    "suburb": "Alstonville",
+    "postcode": "2477",
+    "phone": "(02) 6628 5186",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat-Sun",
+        "storeTime": "7am - 8pm"
+      }
+    ]
   },
   {
     "id": 8760,
     "name": "Armidale",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/armidale-8760"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/armidale-8760",
+    "lat": -30.51274,
+    "lng": 151.668683,
+    "address": "Dumaresq St & Marsh St",
+    "suburb": "Armidale",
+    "postcode": "2350",
+    "phone": "(02) 5701 7300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 8pm"
+      }
+    ]
   },
   {
     "id": 791,
     "name": "Ashfield",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/ashfield-791"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/ashfield-791",
+    "lat": -33.889879,
+    "lng": 151.124763,
+    "address": "Liverpool Rd & Knox St",
+    "suburb": "Ashfield",
+    "postcode": "2131",
+    "phone": "(02) 7263 3200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 11pm"
+      }
+    ]
   },
   {
     "id": 760,
     "name": "Asquith",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/asquith-760"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/asquith-760",
+    "lat": -33.688318,
+    "lng": 151.106601,
+    "address": "339 Pacific Hwy",
+    "suburb": "Asquith",
+    "postcode": "2077",
+    "phone": "(02) 8415 3400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 11pm"
+      }
+    ]
   },
   {
     "id": 886,
     "name": "Balgowlah",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/balgowlah-886"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/balgowlah-886",
+    "lat": -33.793507,
+    "lng": 151.264444,
+    "address": "197 - 215 Condamine St",
+    "suburb": "Balgowlah",
+    "postcode": "2093",
+    "phone": "(02) 9934 9800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 4401,
     "name": "Ballina",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/ballina-4401"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/ballina-4401",
+    "lat": -28.859572,
+    "lng": 153.561172,
+    "address": "Fox St & Kerr St",
+    "suburb": "Ballina",
+    "postcode": "2478",
+    "phone": "(02) 6618 5500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 7662,
     "name": "Bankstown",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bankstown-7662"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bankstown-7662",
+    "lat": -33.916409,
+    "lng": 151.037318,
+    "address": "Bankstown Central - Jacobs Street",
+    "suburb": "Bankstown",
+    "postcode": "2200",
+    "phone": "(02) 8761 1000",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "7am - 11pm"
+      },
+      {
+        "daysOfWeek": "Sat-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 4577,
     "name": "Banora Point",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/banora-point-4577"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/banora-point-4577",
+    "lat": -28.213609,
+    "lng": 153.521894,
+    "address": "Fraser Drv & Leisure Drv",
+    "suburb": "Banora Point",
+    "postcode": "2486",
+    "phone": "(07) 5506 3900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 904,
     "name": "Bateau Bay",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bateau-bay-904"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bateau-bay-904",
+    "lat": -33.374859,
+    "lng": 151.472457,
+    "address": "The Entrance Rd",
+    "suburb": "Bateau Bay",
+    "postcode": "2261",
+    "phone": "(02) 4334 5388",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 811,
     "name": "Batemans Bay",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/batemans-bay-811"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/batemans-bay-811",
+    "lat": -35.706692,
+    "lng": 150.175888,
+    "address": "Vesper St & Princes Hwy",
+    "suburb": "Batemans Bay",
+    "postcode": "2536",
+    "phone": "(02) 4472 1913",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 836,
     "name": "Bathurst",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bathurst-836"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bathurst-836",
+    "lat": -33.416376,
+    "lng": 149.582316,
+    "address": "47 William St",
+    "suburb": "Bathurst",
+    "postcode": "2795",
+    "phone": "(02) 6334 6200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "7am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 10pm"
+      }
+    ]
   },
   {
     "id": 851,
     "name": "Baulkham Hills",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/baulkham-hills-851"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/baulkham-hills-851",
+    "lat": -33.733016,
+    "lng": 150.962023,
+    "address": "Norwest Boulevard",
+    "suburb": "Baulkham Hills",
+    "postcode": "2153",
+    "phone": "(02) 7966 6800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "6am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 10pm"
+      }
+    ]
   },
   {
     "id": 951,
     "name": "Baulkham Hills",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/baulkham-hills-951"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/baulkham-hills-951",
+    "lat": -33.758987,
+    "lng": 150.991129,
+    "address": "Windsor Rd & Olive St",
+    "suburb": "Baulkham Hills",
+    "postcode": "2153",
+    "phone": "(02) 7811 6200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 739,
     "name": "Bega",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bega-739"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bega-739",
+    "lat": -36.674963,
+    "lng": 149.845138,
+    "address": "Parker St & Carp St",
+    "suburb": "Bega",
+    "postcode": "2550",
+    "phone": "(02) 6492 2233",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sat-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 823,
     "name": "Belmont",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/belmont-823"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/belmont-823",
+    "lat": -33.034734,
+    "lng": 151.65891,
+    "address": "Macquarie St & Edgar St",
+    "suburb": "Belmont",
+    "postcode": "2280",
+    "phone": "(02) 4945 0355",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 4178,
     "name": "Belmont North",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/belmont-north-4178"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/belmont-north-4178",
+    "lat": -33.012915,
+    "lng": 151.684313,
+    "address": "Ntaba Rd",
+    "suburb": "Belmont North",
+    "postcode": "2280",
+    "phone": "(02) 4948 5744",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 9pm"
+      }
+    ]
   },
   {
     "id": 4387,
     "name": "Berkeley",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/berkeley-4387"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/berkeley-4387",
+    "lat": -34.480423,
+    "lng": 150.845859,
+    "address": "65 Winnima Way",
+    "suburb": "Berkeley",
+    "postcode": "2506",
+    "phone": "(02) 4222 1000",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "7am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 929,
     "name": "Berowra Heights",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/berowra-heights-929"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/berowra-heights-929",
+    "lat": -33.61281,
+    "lng": 151.138301,
+    "address": "1 Turner Rd",
+    "suburb": "Berowra Heights",
+    "postcode": "2082",
+    "phone": "(02) 9456 2513",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 862,
     "name": "Blacktown",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/blacktown-862"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/blacktown-862",
+    "lat": -33.769857,
+    "lng": 150.905935,
+    "address": "17 Patrick St",
+    "suburb": "Blacktown",
+    "postcode": "2148",
+    "phone": "(02) 8652 8900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 809,
     "name": "Bondi Junction",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bondi-junction-809"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bondi-junction-809",
+    "lat": -33.892883,
+    "lng": 151.248066,
+    "address": "Spring St & Newland St",
+    "suburb": "Bondi Junction",
+    "postcode": "2022",
+    "phone": "(02) 8362 2100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 11pm"
+      }
+    ]
   },
   {
     "id": 853,
     "name": "Bondi Junction",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bondi-junction-853"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bondi-junction-853",
+    "lat": -33.893048,
+    "lng": 151.25085,
+    "address": "500 Oxford Street",
+    "suburb": "Bondi Junction",
+    "postcode": "2022",
+    "phone": "(02) 8383 4800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 11pm"
+      }
+    ]
   },
   {
     "id": 5771,
