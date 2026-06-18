@@ -5993,130 +5993,30 @@
     "id": 338,
     "name": "Warwick",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/warwick-338",
-    "lat": -31.844623,
-    "lng": 115.810281,
-    "address": "Beach Rd & Ernidale Rd",
-    "suburb": "Warwick",
-    "postcode": "6024",
-    "phone": "(08) 6157 5900",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Fri",
-        "storeTime": "8am - 9pm"
-      },
-      {
-        "daysOfWeek": "Sat",
-        "storeTime": "8am - 5pm"
-      },
-      {
-        "daysOfWeek": "Sun",
-        "storeTime": "11am - 5pm"
-      }
-    ]
+    "url": "https://www.coles.com.au/find-stores/coles/wa/warwick-338"
   },
   {
     "id": 292,
     "name": "West Leederville",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/west-leederville-292",
-    "lat": -31.941067,
-    "lng": 115.833079,
-    "address": "115 Cambridge St",
-    "suburb": "West Leederville",
-    "postcode": "6007",
-    "phone": "(08) 6380 3100",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Fri",
-        "storeTime": "8am - 9pm"
-      },
-      {
-        "daysOfWeek": "Sat",
-        "storeTime": "8am - 5pm"
-      },
-      {
-        "daysOfWeek": "Sun",
-        "storeTime": "11am - 5pm"
-      }
-    ]
+    "url": "https://www.coles.com.au/find-stores/coles/wa/west-leederville-292"
   },
   {
     "id": 358,
     "name": "Willetton",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/willetton-358",
-    "lat": -32.057564,
-    "lng": 115.879585,
-    "address": "Burrendah Blvd & Pinetree Gully",
-    "suburb": "Willetton",
-    "postcode": "6155",
-    "phone": "(08) 6158 5300",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Fri",
-        "storeTime": "8am - 9pm"
-      },
-      {
-        "daysOfWeek": "Sat",
-        "storeTime": "8am - 5pm"
-      },
-      {
-        "daysOfWeek": "Sun",
-        "storeTime": "11am - 5pm"
-      }
-    ]
+    "url": "https://www.coles.com.au/find-stores/coles/wa/willetton-358"
   },
   {
     "id": 7680,
     "name": "Yanchep",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/yanchep-7680",
-    "lat": -31.550191,
-    "lng": 115.639431,
-    "address": "1 Peony Boulevard",
-    "suburb": "Yanchep",
-    "postcode": "6035",
-    "phone": "(08) 9595 3400",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Fri",
-        "storeTime": "8am - 9pm"
-      },
-      {
-        "daysOfWeek": "Sat",
-        "storeTime": "8am - 5pm"
-      },
-      {
-        "daysOfWeek": "Sun",
-        "storeTime": "11am - 5pm"
-      }
-    ]
+    "url": "https://www.coles.com.au/find-stores/coles/wa/yanchep-7680"
   },
   {
     "id": 347,
     "name": "Yokine",
     "state": "WA",
-    "url": "https://www.coles.com.au/find-stores/coles/wa/yokine-347",
-    "lat": -31.909672,
-    "lng": 115.84857,
-    "address": "Flinders St & Wiluna St",
-    "suburb": "Yokine",
-    "postcode": "6060",
-    "phone": "(08) 9443 1422",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Fri",
-        "storeTime": "8am - 9pm"
-      },
-      {
-        "daysOfWeek": "Sat",
-        "storeTime": "8am - 5pm"
-      },
-      {
-        "daysOfWeek": "Sun",
-        "storeTime": "11am - 5pm"
-      }
-    ]
+    "url": "https://www.coles.com.au/find-stores/coles/wa/yokine-347"
   }
 ]

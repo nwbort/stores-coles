@@ -1061,103 +1061,31 @@
     "id": 864,
     "name": "Cessnock",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/cessnock-864",
-    "lat": -32.835771,
-    "lng": 151.35427,
-    "address": "North Ave & Cooper St",
-    "suburb": "Cessnock",
-    "postcode": "2325",
-    "phone": "(02) 4991 6172",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Sun",
-        "storeTime": "6am - 10pm"
-      }
-    ]
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/cessnock-864"
   },
   {
     "id": 995,
     "name": "Charlestown",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/charlestown-995",
-    "lat": -32.963649,
-    "lng": 151.694269,
-    "address": "Pearson St",
-    "suburb": "Charlestown",
-    "postcode": "2290",
-    "phone": "(02) 4942 0100",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Sat",
-        "storeTime": "7am - 10pm"
-      },
-      {
-        "daysOfWeek": "Sun",
-        "storeTime": "7am - 9pm"
-      }
-    ]
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/charlestown-995"
   },
   {
     "id": 852,
     "name": "Chatswood",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/chatswood-852",
-    "lat": -33.797225,
-    "lng": 151.182831,
-    "address": "39-45 Victor St",
-    "suburb": "Chatswood",
-    "postcode": "2067",
-    "phone": "(02) 8216 4000",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Sat",
-        "storeTime": "7am - 10pm"
-      },
-      {
-        "daysOfWeek": "Sun",
-        "storeTime": "8am - 10pm"
-      }
-    ]
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/chatswood-852"
   },
   {
     "id": 5773,
     "name": "Chatswood",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/chatswood-5773",
-    "lat": -33.793699,
-    "lng": 151.186417,
-    "address": "345 Victoria Ave, Chatswood Nsw 2067",
-    "suburb": "Chatswood",
-    "postcode": "2067",
-    "phone": "(02) 8448 5200",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Sun",
-        "storeTime": "6am - 10pm"
-      }
-    ]
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/chatswood-5773"
   },
   {
     "id": 953,
     "name": "Chipping Norton",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/chipping-norton-953",
-    "lat": -33.914646,
-    "lng": 150.962082,
-    "address": "20 Ernest Ave",
-    "suburb": "Chipping Norton",
-    "postcode": "2170",
-    "phone": "(02) 8717 0400",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Sat",
-        "storeTime": "7am - 10pm"
-      },
-      {
-        "daysOfWeek": "Sun",
-        "storeTime": "8am - 10pm"
-      }
-    ]
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/chipping-norton-953"
   },
   {
     "id": 5726,
