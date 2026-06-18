@@ -147,25 +147,77 @@
     "id": 4785,
     "name": "Kaleen Plaza",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/kaleen-plaza-4785"
+    "url": "https://www.coles.com.au/find-stores/coles/act/kaleen-plaza-4785",
+    "lat": -35.220297,
+    "lng": 149.10311,
+    "address": "1 Maribyrnong Ave",
+    "suburb": "Kaleen Plaza",
+    "postcode": "2617",
+    "phone": "(02) 6204 8700",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 748,
     "name": "Macquarie",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/macquarie-748"
+    "url": "https://www.coles.com.au/find-stores/coles/act/macquarie-748",
+    "lat": -35.253158,
+    "lng": 149.070363,
+    "address": "Bowman St",
+    "suburb": "Macquarie",
+    "postcode": "2614",
+    "phone": "(02) 6256 2200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 11pm"
+      }
+    ]
   },
   {
     "id": 848,
     "name": "Phillip",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/phillip-848"
+    "url": "https://www.coles.com.au/find-stores/coles/act/phillip-848",
+    "lat": -35.346777,
+    "lng": 149.085588,
+    "address": "Cnr Melrose & Hindmarsh Drives",
+    "suburb": "Phillip",
+    "postcode": "2606",
+    "phone": "(02) 6232 5569",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 911,
     "name": "Tuggeranong",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/tuggeranong-911"
+    "url": "https://www.coles.com.au/find-stores/coles/act/tuggeranong-911",
+    "lat": -35.417174,
+    "lng": 149.067212,
+    "address": "Pitman St & Ankertell St",
+    "suburb": "Tuggeranong",
+    "postcode": "2900",
+    "phone": "(02) 6293 2355",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 4786,
