@@ -3,25 +3,73 @@
     "id": 5784,
     "name": "Amaroo",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/amaroo-5784"
+    "url": "https://www.coles.com.au/find-stores/coles/act/amaroo-5784",
+    "lat": -35.164593,
+    "lng": 149.131995,
+    "address": "Horse Park Dr",
+    "suburb": "Amaroo",
+    "postcode": "2914",
+    "phone": "(02) 6223 0500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 779,
     "name": "Belconnen",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/belconnen-779"
+    "url": "https://www.coles.com.au/find-stores/coles/act/belconnen-779",
+    "lat": -35.23788,
+    "lng": 149.064734,
+    "address": "Benjamin Way",
+    "suburb": "Belconnen",
+    "postcode": "2617",
+    "phone": "(02) 6256 1300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 4787,
     "name": "Canberra City",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/canberra-city-4787"
+    "url": "https://www.coles.com.au/find-stores/coles/act/canberra-city-4787",
+    "lat": -35.278028,
+    "lng": 149.134255,
+    "address": "Bunda St & Petrie St",
+    "suburb": "Canberra City",
+    "postcode": "2601",
+    "phone": "(02) 6276 2100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 858,
     "name": "Chisholm",
     "state": "ACT",
-    "url": "https://www.coles.com.au/find-stores/coles/act/chisholm-858"
+    "url": "https://www.coles.com.au/find-stores/coles/act/chisholm-858",
+    "lat": -35.413758,
+    "lng": 149.128133,
+    "address": "42 Halley St",
+    "suburb": "Chisholm",
+    "postcode": "2905",
+    "phone": "(02) 6298 5100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 735,
