@@ -8,14 +8,19 @@ Usage:
 
 Options:
   --force         Re-enrich all stores, not just new ones
-  --workers N     Concurrent workers (default: 3)
-  --delay SECONDS Minimum seconds between requests globally (default: 0.5)
+  --workers N     Concurrent workers (default: 1)
+  --delay SECONDS Minimum seconds between requests globally (default: 2.0)
   --limit N       Only process first N stores (for testing)
+
+Bot-blocking behaviour:
+  Coles uses Akamai bot protection that blocks an IP after ~4 requests per
+  session. On first block the script saves progress and exits cleanly so that
+  the next run (with a fresh GitHub Actions IP) can continue from where this
+  one left off.
 """
 
 import json
 import time
-import random
 import threading
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -52,26 +57,19 @@ def save_stores(stores):
     print(f'  -> saved {STORES_FILE}', flush=True)
 
 
-BOTBLOCK_WAIT = 60  # seconds to pause after a bot-block before retrying
-
-
-def fetch_one(store, rate_limiter, retries=2):
-    for attempt in range(retries + 1):
-        rate_limiter.acquire()
-        try:
-            info = extract(store['url'])
-            return store['id'], info, None
-        except BotBlockedError:
-            if attempt < retries:
-                wait = BOTBLOCK_WAIT * (attempt + 1) + random.uniform(0, 30)
-                print(f"  [bot-block] {store['name']} – retry {attempt + 1}/{retries} in {wait:.0f}s",
-                      flush=True)
-                time.sleep(wait)
-            else:
-                return store['id'], None, 'bot-blocked'
-        except Exception as e:
-            return store['id'], None, str(e)
-    return store['id'], None, 'bot-blocked'
+def fetch_one(store, rate_limiter, stop_flag):
+    if stop_flag.is_set():
+        return store['id'], None, 'cancelled'
+    rate_limiter.acquire()
+    if stop_flag.is_set():
+        return store['id'], None, 'cancelled'
+    try:
+        info = extract(store['url'])
+        return store['id'], info, None
+    except BotBlockedError:
+        return store['id'], None, 'bot-blocked'
+    except Exception as e:
+        return store['id'], None, str(e)
 
 
 def main():
@@ -100,6 +98,7 @@ def main():
         return
 
     rate_limiter = RateLimiter(args.delay)
+    stop_flag = threading.Event()
     ok = 0
     failed = 0
     done = 0
@@ -107,7 +106,7 @@ def main():
 
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
         futures = {
-            executor.submit(fetch_one, store, rate_limiter): store
+            executor.submit(fetch_one, store, rate_limiter, stop_flag): store
             for store in to_enrich
         }
 
@@ -121,6 +120,13 @@ def main():
                     store.update({k: v for k, v in info.items() if k != 'source'})
                     print(f'[{done}/{total}] {store["state"]} {store["name"]} ok', flush=True)
                     ok += 1
+                elif error == 'cancelled':
+                    pass
+                elif error == 'bot-blocked':
+                    print(f'[{done}/{total}] {store["state"]} {store["name"]} FAIL: bot-blocked'
+                          f' – saving progress and stopping (re-run to continue)', flush=True)
+                    failed += 1
+                    stop_flag.set()
                 else:
                     msg = error or 'no data'
                     print(f'[{done}/{total}] {store["state"]} {store["name"]} FAIL: {msg}',
@@ -131,7 +137,8 @@ def main():
                     save_stores(stores)
 
     save_stores(stores)
-    print(f'\nDone: {ok} enriched, {failed} failed out of {total}')
+    enriched_total = sum(1 for s in stores if 'lat' in s)
+    print(f'\nDone: {ok} enriched this run, {failed} failed, {enriched_total}/{len(stores)} total enriched')
 
 
 if __name__ == '__main__':
