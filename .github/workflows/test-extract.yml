@@ -1,0 +1,38 @@
+name: Test Store Extraction
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - claude/store-info-extraction-rj3b5e
+
+permissions:
+  contents: write
+
+jobs:
+  test-extract:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+
+    - name: Extract info for one store
+      run: |
+        python3 extract_store.py \
+          'https://www.coles.com.au/find-stores/coles/act/amaroo-5784' \
+          > store_test_output.json
+        echo "--- store_test_output.json ---"
+        cat store_test_output.json
+
+    - name: Commit test output
+      run: |
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add store_test_output.json
+        git commit -m "Test: store extraction output for Amaroo 5784" || exit 0
+        git pull --rebase
+        git push
