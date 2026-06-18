@@ -967,31 +967,95 @@
     "id": 872,
     "name": "Carlingford",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/carlingford-872"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/carlingford-872",
+    "lat": -33.776404,
+    "lng": 151.051852,
+    "address": "Pennant Hills Rd & Carlingford Rd",
+    "suburb": "Carlingford",
+    "postcode": "2118",
+    "phone": "(02) 7811 4200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 5694,
     "name": "Casino",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/casino-5694"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/casino-5694",
+    "lat": -28.862717,
+    "lng": 153.050343,
+    "address": "Canberbury St & Hickey St",
+    "suburb": "Casino",
+    "postcode": "2470",
+    "phone": "(02) 6662 5800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 825,
     "name": "Castle Hill",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/castle-hill-825"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/castle-hill-825",
+    "lat": -33.730022,
+    "lng": 151.005754,
+    "address": "Old Castle Hill Rd",
+    "suburb": "Castle Hill",
+    "postcode": "2154",
+    "phone": "(02) 7800 7800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 10pm"
+      }
+    ]
   },
   {
     "id": 4460,
     "name": "Casuarina",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/casuarina-4460"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/casuarina-4460",
+    "lat": -28.29721,
+    "lng": 153.570242,
+    "address": "482 Tweed Coast Rd",
+    "suburb": "Casuarina",
+    "postcode": "2487",
+    "phone": "(02) 8398 5900",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 908,
     "name": "Casula",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/casula-908"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/casula-908",
+    "lat": -33.947753,
+    "lng": 150.899197,
+    "address": "Kurrajong Rd",
+    "suburb": "Casula",
+    "postcode": "2170",
+    "phone": "(02) 8778 3800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 12am"
+      }
+    ]
   },
   {
     "id": 864,
