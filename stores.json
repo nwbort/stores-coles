@@ -685,31 +685,99 @@
     "id": 5771,
     "name": "Bonnells Bay",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bonnells-bay-5771"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bonnells-bay-5771",
+    "lat": -33.11083,
+    "lng": 151.531955,
+    "address": "330 Fishery Point Rd",
+    "suburb": "Bonnells Bay",
+    "postcode": "2264",
+    "phone": "(02) 4973 7800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 7561,
     "name": "Boorooma",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/boorooma-7561"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/boorooma-7561",
+    "lat": -35.075976,
+    "lng": 147.35839,
+    "address": "4-6 Messenger Avenue",
+    "suburb": "Boorooma",
+    "postcode": "2650",
+    "phone": "(02) 5976 1600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "7am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 10pm"
+      }
+    ]
   },
   {
     "id": 804,
     "name": "Bowral",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bowral-804"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bowral-804",
+    "lat": -34.480179,
+    "lng": 150.4193,
+    "address": "Boolwey St & Bendooley St",
+    "suburb": "Bowral",
+    "postcode": "2576",
+    "phone": "(02) 4862 7200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 10pm"
+      }
+    ]
   },
   {
     "id": 7549,
     "name": "Box Hill",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/box-hill-7549"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/box-hill-7549",
+    "lat": -33.658873,
+    "lng": 150.879731,
+    "address": "745 Windsor Rd",
+    "suburb": "Box Hill",
+    "postcode": "2765",
+    "phone": "(02) 8652 1200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 7702,
     "name": "Branxton",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/branxton-7702"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/branxton-7702",
+    "lat": -32.669922,
+    "lng": 151.350097,
+    "address": "22 Empire St",
+    "suburb": "Branxton",
+    "postcode": "2335",
+    "phone": "(02) 4024 9200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 831,
