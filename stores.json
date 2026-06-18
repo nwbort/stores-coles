@@ -1449,31 +1449,95 @@
     "id": 849,
     "name": "Drummoyne",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/drummoyne-849"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/drummoyne-849",
+    "lat": -33.855623,
+    "lng": 151.162032,
+    "address": "Cary St",
+    "suburb": "Drummoyne",
+    "postcode": "2047",
+    "phone": "(02) 9911 6100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 788,
     "name": "Dubbo",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/dubbo-788"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/dubbo-788",
+    "lat": -32.249775,
+    "lng": 148.599261,
+    "address": "Macquarie St & Bultje St",
+    "suburb": "Dubbo",
+    "postcode": "2830",
+    "phone": "(02) 7966 6700",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 9pm"
+      }
+    ]
   },
   {
     "id": 750,
     "name": "Earlwood",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/earlwood-750"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/earlwood-750",
+    "lat": -33.926368,
+    "lng": 151.12388,
+    "address": "5 - 15 Clarke St",
+    "suburb": "Earlwood",
+    "postcode": "2206",
+    "phone": "(02) 9178 4400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 11pm"
+      }
+    ]
   },
   {
     "id": 5751,
     "name": "Eastgardens",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/eastgardens-5751"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/eastgardens-5751",
+    "lat": -33.94164,
+    "lng": 151.225346,
+    "address": "6 Tingwell Blvd Eastgardens",
+    "suburb": "Eastgardens",
+    "postcode": "2036",
+    "phone": "(02) 7231 1800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 5697,
     "name": "Eden",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/eden-5697"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/eden-5697",
+    "lat": -37.063632,
+    "lng": 149.904887,
+    "address": "163 Imlay Street",
+    "suburb": "Eden",
+    "postcode": "2551",
+    "phone": "(02) 6496 4800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 936,
@@ -4965,31 +5029,131 @@
     "id": 462,
     "name": "Elizabeth",
     "state": "SA",
-    "url": "https://www.coles.com.au/find-stores/coles/sa/elizabeth-462"
+    "url": "https://www.coles.com.au/find-stores/coles/sa/elizabeth-462",
+    "lat": -34.717588,
+    "lng": 138.667608,
+    "address": "Philip Hwy",
+    "suburb": "Elizabeth",
+    "postcode": "5112",
+    "phone": "(08) 8252 8655",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "6am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 5pm"
+      }
+    ]
   },
   {
     "id": 4978,
     "name": "Evanston Gardens",
     "state": "SA",
-    "url": "https://www.coles.com.au/find-stores/coles/sa/evanston-gardens-4978"
+    "url": "https://www.coles.com.au/find-stores/coles/sa/evanston-gardens-4978",
+    "lat": -34.620492,
+    "lng": 138.739584,
+    "address": "4 Tulloch St",
+    "suburb": "Evanston Gardens",
+    "postcode": "5116",
+    "phone": "(08) 8522 8200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "7am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 5pm"
+      }
+    ]
   },
   {
     "id": 403,
     "name": "Findon",
     "state": "SA",
-    "url": "https://www.coles.com.au/find-stores/coles/sa/findon-403"
+    "url": "https://www.coles.com.au/find-stores/coles/sa/findon-403",
+    "lat": -34.905313,
+    "lng": 138.530681,
+    "address": "303 Grange Rd",
+    "suburb": "Findon",
+    "postcode": "5023",
+    "phone": "(08) 7326 2300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "6am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 5pm"
+      }
+    ]
   },
   {
     "id": 401,
     "name": "Firle",
     "state": "SA",
-    "url": "https://www.coles.com.au/find-stores/coles/sa/firle-401"
+    "url": "https://www.coles.com.au/find-stores/coles/sa/firle-401",
+    "lat": -34.905107,
+    "lng": 138.655247,
+    "address": "Cnr Glynburn Rd & Shelley St",
+    "suburb": "Firle",
+    "postcode": "5070",
+    "phone": "(08) 8130 7300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "6am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 5pm"
+      }
+    ]
   },
   {
     "id": 444,
     "name": "Gawler",
     "state": "SA",
-    "url": "https://www.coles.com.au/find-stores/coles/sa/gawler-444"
+    "url": "https://www.coles.com.au/find-stores/coles/sa/gawler-444",
+    "lat": -34.595712,
+    "lng": 138.7479,
+    "address": "Cnr Murray & Cowan Sts",
+    "suburb": "Gawler",
+    "postcode": "5118",
+    "phone": "(08) 7506 7000",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "6am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "6am - 5pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 5pm"
+      }
+    ]
   },
   {
     "id": 420,
