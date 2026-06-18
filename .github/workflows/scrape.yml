@@ -17,45 +17,108 @@ permissions:
   contents: write
 
 jobs:
-  scrape:
+  setup:
     runs-on: ubuntu-latest
     if: ${{ !github.event.repository.is_template }}
     steps:
     - uses: actions/checkout@v4
-    - name: Create scrape.sh if it doesn't exist
-      run: |
-        if [ ! -f "scrape.sh" ]; then
-          echo '#!/bin/bash' > scrape.sh
-          if [[ "$REPO_DESC" == http://* ]] || [[ "$REPO_DESC" == https://* ]]; then
-            echo "./download.sh '$REPO_DESC'" >> scrape.sh
-          else
-            echo "# ./download.sh 'https://www.example.com/'" >> scrape.sh
-          fi
-          chmod +x scrape.sh
-          echo "Created scrape.sh"
-          # And replace README.md
-          echo -e "# Scheduled scraper\n\nFor $REPO_DESC" > README.md
-        fi
-      env:
-        REPO_DESC: ${{ github.event.repository.description }}
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: "3.12"
-    # Uncomment to use Playwright via shot-scraper (put shot-scraper in requirements.txt):
-    # - name: Cache Playwright browsers
-    #   uses: actions/cache@v4
-    #   with:
-    #     path: ~/.cache/ms-playwright/
-    #     key: ${{ runner.os }}-browsers
-    # - name: Install Playwright dependencies
-    #   run: |
-    #     shot-scraper install
-    - name: Run the scraper
+    - name: Download sitemap and convert
       run: |
-        ./scrape.sh
+        ./download.sh 'https://www.coles.com.au/sitemap/sitemap-stores.xml'
+        ./convert.sh coles.com.au-sitemap-sitemap-stores.xml.xml stores.json
+    - name: Upload base stores.json
+      uses: actions/upload-artifact@v4
+      with:
+        name: stores-base
+        path: stores.json
+
+  enrich-top:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - name: Download base stores.json
+      uses: actions/download-artifact@v4
+      with:
+        name: stores-base
+        path: .
+    - name: Enrich stores from top
+      run: |
+        if [ "${ENRICH_FORCE}" = "1" ] || [ "$(date +%u)" = "7" ]; then
+          echo "Full enrichment run (top-down)"
+          python3 enrich_stores.py --force
+        else
+          echo "Incremental enrichment run (top-down)"
+          python3 enrich_stores.py
+        fi
       env:
         ENRICH_FORCE: ${{ inputs.full_enrich == true && '1' || '0' }}
+    - name: Upload top-enriched stores.json
+      uses: actions/upload-artifact@v4
+      with:
+        name: stores-top
+        path: stores.json
+
+  enrich-bottom:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - name: Download base stores.json
+      uses: actions/download-artifact@v4
+      with:
+        name: stores-base
+        path: .
+    - name: Enrich stores from bottom
+      run: |
+        if [ "${ENRICH_FORCE}" = "1" ] || [ "$(date +%u)" = "7" ]; then
+          echo "Full enrichment run (bottom-up)"
+          python3 enrich_stores.py --force --reverse
+        else
+          echo "Incremental enrichment run (bottom-up)"
+          python3 enrich_stores.py --reverse
+        fi
+      env:
+        ENRICH_FORCE: ${{ inputs.full_enrich == true && '1' || '0' }}
+    - name: Upload bottom-enriched stores.json
+      uses: actions/upload-artifact@v4
+      with:
+        name: stores-bottom
+        path: stores.json
+
+  merge:
+    needs: [enrich-top, enrich-bottom]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - name: Download enriched stores (top)
+      uses: actions/download-artifact@v4
+      with:
+        name: stores-top
+        path: stores-top
+    - name: Download enriched stores (bottom)
+      uses: actions/download-artifact@v4
+      with:
+        name: stores-bottom
+        path: stores-bottom
+    - name: Merge stores
+      run: python3 merge_stores.py stores-top/stores.json stores-bottom/stores.json stores.json
     - name: Commit and push
       run: |-
         git config user.name "Automated"

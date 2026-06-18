@@ -79,19 +79,24 @@ def main():
     parser.add_argument('--delay', type=float, default=2.0,
                         help='Min seconds between requests globally (default: 2.0)')
     parser.add_argument('--limit', type=int, default=None, help='Max stores to process')
+    parser.add_argument('--reverse', action='store_true',
+                        help='Process stores in reverse order (bottom-up)')
     args = parser.parse_args()
 
     stores = load_stores()
     store_by_id = {s['id']: s for s in stores}
 
     to_enrich = list(stores) if args.force else [s for s in stores if 'lat' not in s]
+    if args.reverse:
+        to_enrich = list(reversed(to_enrich))
     if args.limit is not None:
         to_enrich = to_enrich[:args.limit]
 
     total = len(to_enrich)
+    direction = 'bottom-up' if args.reverse else 'top-down'
     mode = 'full re-enrich' if args.force else 'new stores only'
     print(f'{len(stores)} total stores, {total} to enrich '
-          f'({mode}, {args.workers} workers, {args.delay}s delay)')
+          f'({mode}, {direction}, {args.workers} workers, {args.delay}s delay)')
 
     if total == 0:
         print('Nothing to do.')
