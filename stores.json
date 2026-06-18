@@ -321,25 +321,77 @@
     "id": 760,
     "name": "Asquith",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/asquith-760"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/asquith-760",
+    "lat": -33.688318,
+    "lng": 151.106601,
+    "address": "339 Pacific Hwy",
+    "suburb": "Asquith",
+    "postcode": "2077",
+    "phone": "(02) 8415 3400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 11pm"
+      }
+    ]
   },
   {
     "id": 886,
     "name": "Balgowlah",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/balgowlah-886"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/balgowlah-886",
+    "lat": -33.793507,
+    "lng": 151.264444,
+    "address": "197 - 215 Condamine St",
+    "suburb": "Balgowlah",
+    "postcode": "2093",
+    "phone": "(02) 9934 9800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 4401,
     "name": "Ballina",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/ballina-4401"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/ballina-4401",
+    "lat": -28.859572,
+    "lng": 153.561172,
+    "address": "Fox St & Kerr St",
+    "suburb": "Ballina",
+    "postcode": "2478",
+    "phone": "(02) 6618 5500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 7662,
     "name": "Bankstown",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/bankstown-7662"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/bankstown-7662",
+    "lat": -33.916409,
+    "lng": 151.037318,
+    "address": "Bankstown Central - Jacobs Street",
+    "suburb": "Bankstown",
+    "postcode": "2200",
+    "phone": "(02) 8761 1000",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Fri",
+        "storeTime": "7am - 11pm"
+      },
+      {
+        "daysOfWeek": "Sat-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 4577,
