@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+stores-chunk-*/
+stores-top/
+stores-bottom/

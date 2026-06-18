@@ -10,57 +10,102 @@ on:
         description: 'Force re-enrich all stores (ignores day-of-week check)'
         type: boolean
         default: false
+      enrich_chunks:
+        description: 'Number of parallel enrichment jobs'
+        type: number
+        default: 2
   schedule:
   - cron: '*/10 * * * *'
+
+env:
+  ENRICH_CHUNKS: ${{ inputs.enrich_chunks || 2 }}
 
 permissions:
   contents: write
 
 jobs:
-  scrape:
+  setup:
     runs-on: ubuntu-latest
     if: ${{ !github.event.repository.is_template }}
+    outputs:
+      chunk-matrix: ${{ steps.matrix.outputs.value }}
     steps:
-    - uses: actions/checkout@v4
-    - name: Create scrape.sh if it doesn't exist
-      run: |
-        if [ ! -f "scrape.sh" ]; then
-          echo '#!/bin/bash' > scrape.sh
-          if [[ "$REPO_DESC" == http://* ]] || [[ "$REPO_DESC" == https://* ]]; then
-            echo "./download.sh '$REPO_DESC'" >> scrape.sh
-          else
-            echo "# ./download.sh 'https://www.example.com/'" >> scrape.sh
-          fi
-          chmod +x scrape.sh
-          echo "Created scrape.sh"
-          # And replace README.md
-          echo -e "# Scheduled scraper\n\nFor $REPO_DESC" > README.md
-        fi
-      env:
-        REPO_DESC: ${{ github.event.repository.description }}
+    - uses: actions/checkout@v6
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: "3.12"
-    # Uncomment to use Playwright via shot-scraper (put shot-scraper in requirements.txt):
-    # - name: Cache Playwright browsers
-    #   uses: actions/cache@v4
-    #   with:
-    #     path: ~/.cache/ms-playwright/
-    #     key: ${{ runner.os }}-browsers
-    # - name: Install Playwright dependencies
-    #   run: |
-    #     shot-scraper install
-    - name: Run the scraper
+    - name: Download sitemap and convert
       run: |
-        ./scrape.sh
+        ./download.sh 'https://www.coles.com.au/sitemap/sitemap-stores.xml'
+        ./convert.sh coles.com.au-sitemap-sitemap-stores.xml.xml stores.json
+    - name: Generate chunk matrix
+      id: matrix
+      run: |
+        python3 -c "import json; print('value=' + json.dumps(list(range($ENRICH_CHUNKS))))" >> $GITHUB_OUTPUT
+    - name: Upload base stores.json
+      uses: actions/upload-artifact@v7
+      with:
+        name: stores-base
+        path: stores.json
+
+  enrich:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        chunk: ${{ fromJson(needs.setup.outputs.chunk-matrix) }}
+    steps:
+    - uses: actions/checkout@v6
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: "3.12"
+    - name: Download base stores.json
+      uses: actions/download-artifact@v8
+      with:
+        name: stores-base
+        path: .
+    - name: Enrich stores (chunk ${{ matrix.chunk }}/${{ env.ENRICH_CHUNKS }})
+      run: |
+        FLAGS="--chunk ${{ matrix.chunk }}/$ENRICH_CHUNKS"
+        if [ "${ENRICH_FORCE}" = "1" ] || [ "$(date +%u)" = "7" ]; then
+          echo "Full enrichment run (chunk ${{ matrix.chunk }}/$ENRICH_CHUNKS)"
+          python3 enrich_stores.py --force $FLAGS
+        else
+          echo "Incremental enrichment run (chunk ${{ matrix.chunk }}/$ENRICH_CHUNKS)"
+          python3 enrich_stores.py $FLAGS
+        fi
       env:
         ENRICH_FORCE: ${{ inputs.full_enrich == true && '1' || '0' }}
+    - name: Upload enriched stores.json
+      uses: actions/upload-artifact@v7
+      with:
+        name: stores-chunk-${{ matrix.chunk }}
+        path: stores.json
+
+  merge:
+    needs: enrich
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: "3.12"
+    - name: Download all chunk artifacts
+      uses: actions/download-artifact@v8
+      with:
+        pattern: stores-chunk-*
+        path: /tmp/chunks
+        merge-multiple: false
+    - name: Merge stores
+      run: python3 merge_stores.py stores.json /tmp/chunks/stores-chunk-*/stores.json
     - name: Commit and push
       run: |-
         git config user.name "Automated"
         git config user.email "actions@users.noreply.github.com"
-        git add -A
+        git add stores.json
         timestamp=$(date -u)
         git commit -m "${timestamp}" || exit 0
         git pull --rebase
