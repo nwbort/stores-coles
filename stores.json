@@ -783,31 +783,95 @@
     "id": 831,
     "name": "Brighton Le Sands",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/brighton-le-sands-831"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/brighton-le-sands-831",
+    "lat": -33.959419,
+    "lng": 151.153634,
+    "address": "36 Princess St",
+    "suburb": "Brighton Le Sands",
+    "postcode": "2216",
+    "phone": "(02) 7231 7400",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sat",
+        "storeTime": "6am - 11pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "8am - 11pm"
+      }
+    ]
   },
   {
     "id": 839,
     "name": "Broadway",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/broadway-839"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/broadway-839",
+    "lat": -33.883842,
+    "lng": 151.19326,
+    "address": "Broadway St & Bay St",
+    "suburb": "Broadway",
+    "postcode": "2037",
+    "phone": "(02) 8333 9200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 12am"
+      }
+    ]
   },
   {
     "id": 4960,
     "name": "Broken Hill",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/broken-hill-4960"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/broken-hill-4960",
+    "lat": -31.965069,
+    "lng": 141.454924,
+    "address": "South Rd & Gossan St",
+    "suburb": "Broken Hill",
+    "postcode": "2880",
+    "phone": "(08) 8080 0100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 897,
     "name": "Brookvale",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/brookvale-897"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/brookvale-897",
+    "lat": -33.769061,
+    "lng": 151.266118,
+    "address": "Pittwater Rd & Cross St",
+    "suburb": "Brookvale",
+    "postcode": "2100",
+    "phone": "(02) 9909 6200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 5759,
     "name": "Budgewoi",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/budgewoi-5759"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/budgewoi-5759",
+    "lat": -33.233581,
+    "lng": 151.554132,
+    "address": "Noela Pl & Tenth Ave",
+    "suburb": "Budgewoi",
+    "postcode": "2262",
+    "phone": "(02) 4390 6000",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 9pm"
+      }
+    ]
   },
   {
     "id": 861,
