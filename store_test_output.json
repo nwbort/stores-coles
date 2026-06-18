@@ -1,0 +1,68 @@
+=== EXTRACTION RESULT ===
+{
+  "url": "https://www.coles.com.au/find-stores/coles/act/amaroo-5784",
+  "source": "json-ld",
+  "name": "Coles Amaroo",
+  "address": {
+    "street": "Horse Park Dr",
+    "suburb": "Amaroo",
+    "state": "ACT",
+    "postcode": "2914",
+    "country": "AU"
+  },
+  "coordinates": {
+    "lat": -35.164593,
+    "lng": 149.131995
+  },
+  "opening_hours": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "07:00:00",
+      "closes": "22:00:00"
+    }
+  ],
+  "phone": "(02) 6223 0500",
+  "_next_data_page_props_keys": [
+    "serverSideOutageConfig",
+    "assetsUrl",
+    "store",
+    "initialState"
+  ],
+  "_next_data_store_raw": {
+    "storeId": "5784",
+    "brandName": "Coles Supermarkets",
+    "brandId": 2,
+    "latitude": -35.164593,
+    "longitude": 149.131995,
+    "storeName": "Coles Amaroo",
+    "address": "Horse Park Dr",
+    "suburb": "Amaroo",
+    "state": "ACT",
+    "postcode": "2914",
+    "phone": "(02) 6223 0500",
+    "services": [],
+    "tradingHoursToday": {
+      "storeTime": "Today from 7am to 10pm",
+      "holidayReason": null,
+      "isOpenNow": true
+    },
+    "tradingHours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ],
+    "holidayTradingHours": [],
+    "nextDoorStores": [],
+    "collectionPointId": "5784CC5784"
+  }
+}
