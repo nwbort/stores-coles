@@ -29,6 +29,7 @@ jobs:
     if: ${{ !github.event.repository.is_template }}
     outputs:
       chunk-matrix: ${{ steps.matrix.outputs.value }}
+      chunk-count: ${{ steps.matrix.outputs.chunk-count }}
     steps:
     - uses: actions/checkout@v6
     - name: Set up Python
@@ -42,7 +43,20 @@ jobs:
     - name: Generate chunk matrix
       id: matrix
       run: |
-        python3 -c "import json; print('value=' + json.dumps(list(range($ENRICH_CHUNKS))))" >> $GITHUB_OUTPUT
+        python3 - << 'EOF'
+        import json, math, os, datetime
+        full_enrich = "${{ inputs.full_enrich }}" == "true"
+        is_sunday = datetime.datetime.utcnow().weekday() == 6
+        if full_enrich or is_sunday:
+            with open('stores.json') as f:
+                stores = json.load(f)
+            n_chunks = max(1, math.ceil(len(stores) / 5))
+        else:
+            n_chunks = int(os.environ.get('ENRICH_CHUNKS', '2'))
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+            f.write('value=' + json.dumps(list(range(n_chunks))) + '\n')
+            f.write(f'chunk-count={n_chunks}\n')
+        EOF
     - name: Upload base stores.json
       uses: actions/upload-artifact@v7
       with:
@@ -66,14 +80,15 @@ jobs:
       with:
         name: stores-base
         path: .
-    - name: Enrich stores (chunk ${{ matrix.chunk }}/${{ env.ENRICH_CHUNKS }})
+    - name: Enrich stores (chunk ${{ matrix.chunk }}/${{ needs.setup.outputs.chunk-count }})
       run: |
-        FLAGS="--chunk ${{ matrix.chunk }}/$ENRICH_CHUNKS"
+        CHUNK_COUNT="${{ needs.setup.outputs.chunk-count }}"
+        FLAGS="--chunk ${{ matrix.chunk }}/$CHUNK_COUNT"
         if [ "${ENRICH_FORCE}" = "1" ] || [ "$(date +%u)" = "7" ]; then
-          echo "Full enrichment run (chunk ${{ matrix.chunk }}/$ENRICH_CHUNKS)"
+          echo "Full enrichment run (chunk ${{ matrix.chunk }}/$CHUNK_COUNT)"
           python3 enrich_stores.py --force $FLAGS
         else
-          echo "Incremental enrichment run (chunk ${{ matrix.chunk }}/$ENRICH_CHUNKS)"
+          echo "Incremental enrichment run (chunk ${{ matrix.chunk }}/$CHUNK_COUNT)"
           python3 enrich_stores.py $FLAGS
         fi
       env:
