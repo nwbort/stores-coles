@@ -877,31 +877,91 @@
     "id": 861,
     "name": "Burwood",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/burwood-861"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/burwood-861",
+    "lat": -33.874773,
+    "lng": 151.107012,
+    "address": "Wilga St & Shaftsbury Rd",
+    "suburb": "Burwood",
+    "postcode": "2134",
+    "phone": "(02) 7923 3800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 874,
     "name": "Cambridge Gardens",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/cambridge-gardens-874"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/cambridge-gardens-874",
+    "lat": -33.74036,
+    "lng": 150.717478,
+    "address": "Richmond Rd & Boomerang Pl",
+    "suburb": "Cambridge Gardens",
+    "postcode": "2747",
+    "phone": "(02) 4749 6300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "6am - 11pm"
+      }
+    ]
   },
   {
     "id": 785,
     "name": "Camden",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/camden-785"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/camden-785",
+    "lat": -34.057318,
+    "lng": 150.692841,
+    "address": "Murray St & South Argyle St",
+    "suburb": "Camden",
+    "postcode": "2570",
+    "phone": "(02) 4655 7946",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 4813,
     "name": "Campbelltown",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/campbelltown-4813"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/campbelltown-4813",
+    "lat": -34.075746,
+    "lng": 150.798188,
+    "address": "Corner Of Gilchrist And Kellicar Road",
+    "suburb": "Campbelltown",
+    "postcode": "2560",
+    "phone": "(02) 4629 2100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 906,
     "name": "Campbelltown",
     "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/campbelltown-906"
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/campbelltown-906",
+    "lat": -34.068369,
+    "lng": 150.811155,
+    "address": "271-281 Queen St",
+    "suburb": "Campbelltown",
+    "postcode": "2560",
+    "phone": "(02) 4629 4300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
   },
   {
     "id": 872,
