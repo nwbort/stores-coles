@@ -62,7 +62,7 @@ jobs:
       with:
         python-version: "3.12"
     - name: Download base stores.json
-      uses: actions/download-artifact@v6
+      uses: actions/download-artifact@v8
       with:
         name: stores-base
         path: .
@@ -94,7 +94,7 @@ jobs:
       with:
         python-version: "3.12"
     - name: Download all chunk artifacts
-      uses: actions/download-artifact@v6
+      uses: actions/download-artifact@v8
       with:
         pattern: stores-chunk-*
         path: /tmp/chunks
