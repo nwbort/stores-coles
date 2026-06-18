@@ -25,9 +25,9 @@ jobs:
         python3 extract_store.py \
           'https://www.coles.com.au/find-stores/coles/act/amaroo-5784'
 
-    - name: Test enrich on first 5 stores
+    - name: Test enrich on first 10 stores (with rate limiter)
       run: |
-        python3 enrich_stores.py --limit 5 --workers 3
+        python3 enrich_stores.py --limit 10 --workers 3 --delay 0.5
 
     - name: Show enriched output
       run: |
@@ -36,7 +36,7 @@ jobs:
         stores = json.load(open('stores.json'))
         enriched = [s for s in stores if 'lat' in s]
         print(f"{len(enriched)} stores enriched")
-        for s in enriched[:5]:
+        for s in enriched[:10]:
             print(json.dumps(s, indent=2))
         EOF
 

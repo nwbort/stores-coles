@@ -134,6 +134,9 @@ def extract(url, verbose=False):
             result['source'] = 'json-ld'
             return result
 
+    # Log diagnostic so we can identify bot-block pages
+    print(f"  [extract fail] url={url} size={len(html_content)} "
+          f"snippet={html_content[:200]!r}", file=sys.stderr)
     return None
 
 
