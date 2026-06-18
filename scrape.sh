@@ -4,7 +4,7 @@
 
 # Weekly on Sundays (or when ENRICH_FORCE=1), re-enrich all stores.
 # Every other day, only enrich new stores.
-ENRICH_FLAGS="--workers 5"
+ENRICH_FLAGS="--workers 3 --delay 1.0"
 if [ "${ENRICH_FORCE}" = "1" ] || [ "$(date +%u)" = "7" ]; then
   echo "Full enrichment run"
   ENRICH_FLAGS="$ENRICH_FLAGS --force"
