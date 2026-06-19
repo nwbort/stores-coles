@@ -10712,6 +10712,24 @@
     ]
   },
   {
+    "id": 6522,
+    "name": "Riverlea Park",
+    "state": "SA",
+    "url": "https://www.coles.com.au/find-stores/coles/sa/riverlea-park-6522",
+    "lat": -34.653539,
+    "lng": 138.535514,
+    "address": "2 Central Dr",
+    "suburb": "Riverlea Park",
+    "postcode": "5120",
+    "phone": "(08) 8286 3500",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Wed-Fri",
+        "storeTime": "7am - 9pm"
+      }
+    ]
+  },
+  {
     "id": 4981,
     "name": "Salisbury",
     "state": "SA",
