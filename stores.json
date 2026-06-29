@@ -11576,24 +11576,6 @@
     ]
   },
   {
-    "id": 7796,
-    "name": "Belmont",
-    "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/belmont-7796",
-    "lat": -38.174162,
-    "lng": 144.342868,
-    "address": "158 - 162a High St",
-    "suburb": "Belmont",
-    "postcode": "3216",
-    "phone": "(03) 5243 1922",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Sun",
-        "storeTime": "7am - 9pm"
-      }
-    ]
-  },
-  {
     "id": 501,
     "name": "Belmont",
     "state": "VIC",
@@ -13632,6 +13614,28 @@
       {
         "daysOfWeek": "Mon-Sun",
         "storeTime": "6am - 10pm"
+      }
+    ]
+  },
+  {
+    "id": 5830,
+    "name": "Maiden Gully",
+    "state": "VIC",
+    "url": "https://www.coles.com.au/find-stores/coles/vic/maiden-gully-5830",
+    "lat": -36.743084,
+    "lng": 144.208792,
+    "address": "715 Calder Hwy",
+    "suburb": "Maiden Gully",
+    "postcode": "3551",
+    "phone": "(03) 4448 4200",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Wed",
+        "storeTime": "9am - 10pm"
+      },
+      {
+        "daysOfWeek": "Thu-Sun",
+        "storeTime": "7am - 10pm"
       }
     ]
   },
