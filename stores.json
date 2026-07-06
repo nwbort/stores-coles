@@ -2836,6 +2836,28 @@
     ]
   },
   {
+    "id": 4780,
+    "name": "Melrose Park",
+    "state": "NSW",
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/melrose-park-4780",
+    "lat": -33.813554,
+    "lng": 151.069411,
+    "address": "33 Hope St",
+    "suburb": "Melrose Park",
+    "postcode": "2114",
+    "phone": "(02) 7261 5000",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Wed",
+        "storeTime": "9am - 10pm"
+      },
+      {
+        "daysOfWeek": "Thu-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
+  },
+  {
     "id": 5793,
     "name": "Merrylands",
     "state": "NSW",
