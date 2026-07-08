@@ -964,6 +964,24 @@
     ]
   },
   {
+    "id": 7563,
+    "name": "Caringbah",
+    "state": "NSW",
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/caringbah-7563",
+    "lat": -34.042082,
+    "lng": 151.120072,
+    "address": "1 President Ln",
+    "suburb": "Caringbah",
+    "postcode": "2229",
+    "phone": "(02) 8556 9600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "12am - 12am"
+      }
+    ]
+  },
+  {
     "id": 872,
     "name": "Carlingford",
     "state": "NSW",
@@ -1482,6 +1500,24 @@
       {
         "daysOfWeek": "Sun",
         "storeTime": "8am - 9pm"
+      }
+    ]
+  },
+  {
+    "id": 4767,
+    "name": "Dubbo",
+    "state": "NSW",
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/dubbo-4767",
+    "lat": -32.272386,
+    "lng": 148.638005,
+    "address": "2 Stream Ave",
+    "suburb": "Dubbo",
+    "postcode": "2830",
+    "phone": "(02) 5857 6300",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Mon-Sun",
+        "storeTime": "12am - 12am"
       }
     ]
   },
