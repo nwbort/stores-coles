@@ -964,6 +964,24 @@
     ]
   },
   {
+    "id": 7563,
+    "name": "Caringbah",
+    "state": "NSW",
+    "url": "https://www.coles.com.au/find-stores/coles/nsw/caringbah-7563",
+    "lat": -34.042082,
+    "lng": 151.120072,
+    "address": "1 President Ln",
+    "suburb": "Caringbah",
+    "postcode": "2229",
+    "phone": "(02) 8556 9600",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Fri",
+        "storeTime": "8:30am - 10pm"
+      }
+    ]
+  },
+  {
     "id": 872,
     "name": "Carlingford",
     "state": "NSW",
