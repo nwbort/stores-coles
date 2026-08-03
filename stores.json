@@ -7064,6 +7064,28 @@
     ]
   },
   {
+    "id": 5832,
+    "name": "Joyner",
+    "state": "QLD",
+    "url": "https://www.coles.com.au/find-stores/coles/qld/joyner-5832",
+    "lat": -27.283426,
+    "lng": 152.95028,
+    "address": "27/31 Youngs Crossing Rd",
+    "suburb": "Joyner",
+    "postcode": "4500",
+    "phone": "(07) 3093 6800",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Sat",
+        "storeTime": "7am - 9pm"
+      },
+      {
+        "daysOfWeek": "Sun",
+        "storeTime": "9am - 6pm"
+      }
+    ]
+  },
+  {
     "id": 8715,
     "name": "Kallangur",
     "state": "QLD",
