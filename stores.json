@@ -964,24 +964,6 @@
     ]
   },
   {
-    "id": 7563,
-    "name": "Caringbah",
-    "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/caringbah-7563",
-    "lat": -34.042082,
-    "lng": 151.120072,
-    "address": "1 President Ln",
-    "suburb": "Caringbah",
-    "postcode": "2229",
-    "phone": "(02) 8556 9600",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Sun",
-        "storeTime": "7am - 10pm"
-      }
-    ]
-  },
-  {
     "id": 872,
     "name": "Carlingford",
     "state": "NSW",
@@ -1500,28 +1482,6 @@
       {
         "daysOfWeek": "Sun",
         "storeTime": "8am - 9pm"
-      }
-    ]
-  },
-  {
-    "id": 4767,
-    "name": "Dubbo",
-    "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/dubbo-4767",
-    "lat": -32.272386,
-    "lng": 148.638005,
-    "address": "2 Stream Ave",
-    "suburb": "Dubbo",
-    "postcode": "2830",
-    "phone": "(02) 5857 6300",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Wed",
-        "storeTime": "9am - 10pm"
-      },
-      {
-        "daysOfWeek": "Thu-Fri",
-        "storeTime": "6am - 10pm"
       }
     ]
   },
@@ -2872,24 +2832,6 @@
       {
         "daysOfWeek": "Mon-Sun",
         "storeTime": "7am - 9pm"
-      }
-    ]
-  },
-  {
-    "id": 4780,
-    "name": "Melrose Park",
-    "state": "NSW",
-    "url": "https://www.coles.com.au/find-stores/coles/nsw/melrose-park-4780",
-    "lat": -33.813554,
-    "lng": 151.069411,
-    "address": "33 Hope St",
-    "suburb": "Melrose Park",
-    "postcode": "2114",
-    "phone": "(02) 7261 5000",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Sun",
-        "storeTime": "7am - 10pm"
       }
     ]
   },
@@ -7082,28 +7024,6 @@
     ]
   },
   {
-    "id": 5832,
-    "name": "Joyner",
-    "state": "QLD",
-    "url": "https://www.coles.com.au/find-stores/coles/qld/joyner-5832",
-    "lat": -27.283426,
-    "lng": 152.95028,
-    "address": "27/31 Youngs Crossing Rd",
-    "suburb": "Joyner",
-    "postcode": "4500",
-    "phone": "(07) 3093 6800",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Sat",
-        "storeTime": "7am - 9pm"
-      },
-      {
-        "daysOfWeek": "Sun",
-        "storeTime": "9am - 9pm"
-      }
-    ]
-  },
-  {
     "id": 8715,
     "name": "Kallangur",
     "state": "QLD",
@@ -10792,32 +10712,6 @@
     ]
   },
   {
-    "id": 6522,
-    "name": "Riverlea Park",
-    "state": "SA",
-    "url": "https://www.coles.com.au/find-stores/coles/sa/riverlea-park-6522",
-    "lat": -34.653539,
-    "lng": 138.535514,
-    "address": "2 Central Dr",
-    "suburb": "Riverlea Park",
-    "postcode": "5120",
-    "phone": "(08) 8286 3500",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Fri",
-        "storeTime": "7am - 9pm"
-      },
-      {
-        "daysOfWeek": "Sat",
-        "storeTime": "7am - 5pm"
-      },
-      {
-        "daysOfWeek": "Sun",
-        "storeTime": "9am - 5pm"
-      }
-    ]
-  },
-  {
     "id": 4981,
     "name": "Salisbury",
     "state": "SA",
@@ -11662,6 +11556,12 @@
         "storeTime": "7am - 9pm"
       }
     ]
+  },
+  {
+    "id": 7796,
+    "name": "Belmont",
+    "state": "VIC",
+    "url": "https://www.coles.com.au/find-stores/coles/vic/belmont-7796"
   },
   {
     "id": 501,
@@ -13702,24 +13602,6 @@
       {
         "daysOfWeek": "Mon-Sun",
         "storeTime": "6am - 10pm"
-      }
-    ]
-  },
-  {
-    "id": 5830,
-    "name": "Maiden Gully",
-    "state": "VIC",
-    "url": "https://www.coles.com.au/find-stores/coles/vic/maiden-gully-5830",
-    "lat": -36.743084,
-    "lng": 144.208792,
-    "address": "715 Calder Hwy",
-    "suburb": "Maiden Gully",
-    "postcode": "3551",
-    "phone": "(03) 4448 4200",
-    "trading_hours": [
-      {
-        "daysOfWeek": "Mon-Sun",
-        "storeTime": "7am - 10pm"
       }
     ]
   },
