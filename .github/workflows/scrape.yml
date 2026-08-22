@@ -62,6 +62,7 @@ jobs:
       with:
         name: stores-base
         path: stores.json
+        retention-days: 1
 
   enrich:
     needs: setup
@@ -98,6 +99,7 @@ jobs:
       with:
         name: stores-chunk-${{ matrix.chunk }}
         path: stores.json
+        retention-days: 1
 
   merge:
     needs: enrich
