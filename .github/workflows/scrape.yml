@@ -15,7 +15,7 @@ on:
         type: number
         default: 2
   schedule:
-  - cron: '*/10 * * * *'
+  - cron: '16 6 * * *'
 
 env:
   ENRICH_CHUNKS: ${{ inputs.enrich_chunks || 2 }}
