@@ -21,9 +21,11 @@ jobs:
         MAX_DELETE: ${{ inputs.max_delete }}
       run: |
         ids=$(gh api --paginate "/repos/${{ github.repository }}/actions/artifacts" --jq '.artifacts[].id')
+        total=$(echo -n "$ids" | grep -c . || true)
         if [ "$MAX_DELETE" -gt 0 ] 2>/dev/null; then
           ids=$(echo "$ids" | head -n "$MAX_DELETE")
         fi
+        echo "Found $total artifact(s) to delete"
         count=0
         failed=0
         for id in $ids; do
