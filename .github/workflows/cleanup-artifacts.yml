@@ -27,7 +27,6 @@ jobs:
         count=0
         failed=0
         for id in $ids; do
-          echo "Deleting artifact $id"
           if gh api -X DELETE "/repos/${{ github.repository }}/actions/artifacts/$id"; then
             count=$((count + 1))
           else
