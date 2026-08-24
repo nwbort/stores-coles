@@ -2,6 +2,11 @@ name: Cleanup Artifacts
 
 on:
   workflow_dispatch:
+    inputs:
+      max_delete:
+        description: 'Max number of artifacts to delete (0 = no limit)'
+        type: number
+        default: 0
 
 permissions:
   actions: write
@@ -10,12 +15,24 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
-    - name: Delete all stored artifacts
+    - name: Delete stored artifacts
       env:
         GH_TOKEN: ${{ github.token }}
+        MAX_DELETE: ${{ inputs.max_delete }}
       run: |
-        gh api --paginate "/repos/${{ github.repository }}/actions/artifacts" --jq '.artifacts[].id' | \
-        while read -r id; do
+        ids=$(gh api --paginate "/repos/${{ github.repository }}/actions/artifacts" --jq '.artifacts[].id')
+        if [ "$MAX_DELETE" -gt 0 ] 2>/dev/null; then
+          ids=$(echo "$ids" | head -n "$MAX_DELETE")
+        fi
+        count=0
+        failed=0
+        for id in $ids; do
           echo "Deleting artifact $id"
-          gh api -X DELETE "/repos/${{ github.repository }}/actions/artifacts/$id"
+          if gh api -X DELETE "/repos/${{ github.repository }}/actions/artifacts/$id"; then
+            count=$((count + 1))
+          else
+            echo "::warning::Failed to delete artifact $id"
+            failed=$((failed + 1))
+          fi
         done
+        echo "Deleted $count artifact(s), $failed failure(s)"
