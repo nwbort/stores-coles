@@ -59,13 +59,16 @@ jobs:
           fi
 
           results=$(echo "$ids" | xargs -P 50 -I{} bash -c 'delete_artifact "$@"' _ {})
-          count=$((count + $(echo "$results" | grep -c ' ok$' || true)))
+          batch_ok=$(echo "$results" | grep -c ' ok$' || true)
           new_failed=$(echo "$results" | awk '$2 == "fail" { print $1 }')
+          batch_failed=$( [ -n "$new_failed" ] && echo "$new_failed" | grep -c . || true)
+          count=$((count + batch_ok))
+          failed=$((failed + batch_failed))
           if [ -n "$new_failed" ]; then
-            failed=$((failed + $(echo "$new_failed" | grep -c .)))
             failed_ids="$failed_ids
 $new_failed"
           fi
+          echo "Batch: deleted $batch_ok, failed $batch_failed (total so far: $count deleted, $failed failed)"
         done
 
         echo "Deleted $count artifact(s), $failed failure(s)"
