@@ -26,14 +26,24 @@ jobs:
           ids=$(echo "$ids" | head -n "$MAX_DELETE")
         fi
         echo "Found $total artifact(s) to delete"
-        count=0
-        failed=0
-        for id in $ids; do
-          if gh api -X DELETE "/repos/${{ github.repository }}/actions/artifacts/$id"; then
-            count=$((count + 1))
+
+        delete_artifact() {
+          id="$1"
+          if gh api -X DELETE "/repos/${{ github.repository }}/actions/artifacts/$id" >/dev/null 2>&1; then
+            echo "ok"
           else
-            echo "::warning::Failed to delete artifact $id"
-            failed=$((failed + 1))
+            echo "::warning::Failed to delete artifact $id" >&2
+            echo "fail"
           fi
-        done
+        }
+        export -f delete_artifact
+        export GH_TOKEN
+
+        if [ -n "$ids" ]; then
+          results=$(echo "$ids" | xargs -P 10 -I{} bash -c 'delete_artifact "$@"' _ {})
+        else
+          results=""
+        fi
+        count=$(echo "$results" | grep -c '^ok$' || true)
+        failed=$(echo "$results" | grep -c '^fail$' || true)
         echo "Deleted $count artifact(s), $failed failure(s)"
