@@ -40,7 +40,7 @@ jobs:
         export GH_TOKEN
 
         if [ -n "$ids" ]; then
-          results=$(echo "$ids" | xargs -P 10 -I{} bash -c 'delete_artifact "$@"' _ {})
+          results=$(echo "$ids" | xargs -P 50 -I{} bash -c 'delete_artifact "$@"' _ {})
         else
           results=""
         fi
