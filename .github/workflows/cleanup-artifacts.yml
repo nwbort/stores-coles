@@ -65,8 +65,7 @@ jobs:
           count=$((count + batch_ok))
           failed=$((failed + batch_failed))
           if [ -n "$new_failed" ]; then
-            failed_ids="$failed_ids
-$new_failed"
+            failed_ids=$(printf '%s\n%s' "$failed_ids" "$new_failed")
           fi
           echo "Batch: deleted $batch_ok, failed $batch_failed (total so far: $count deleted, $failed failed)"
         done
