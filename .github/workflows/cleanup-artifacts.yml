@@ -20,30 +20,55 @@ jobs:
         GH_TOKEN: ${{ github.token }}
         MAX_DELETE: ${{ inputs.max_delete }}
       run: |
-        ids=$(gh api --paginate "/repos/${{ github.repository }}/actions/artifacts" --jq '.artifacts[].id')
-        total=$(echo -n "$ids" | grep -c . || true)
-        if [ "$MAX_DELETE" -gt 0 ] 2>/dev/null; then
-          ids=$(head -n "$MAX_DELETE" <<< "$ids")
-        fi
-        echo "Found $total artifact(s) to delete"
-
         delete_artifact() {
           id="$1"
           if gh api -X DELETE "/repos/${{ github.repository }}/actions/artifacts/$id" >/dev/null 2>&1; then
-            echo "ok"
+            echo "$id ok"
           else
             echo "::warning::Failed to delete artifact $id" >&2
-            echo "fail"
+            echo "$id fail"
           fi
         }
         export -f delete_artifact
         export GH_TOKEN
 
-        if [ -n "$ids" ]; then
+        count=0
+        failed=0
+        failed_ids=""
+        while :; do
+          if [ "$MAX_DELETE" -gt 0 ] 2>/dev/null; then
+            remaining=$((MAX_DELETE - count))
+            if [ "$remaining" -le 0 ]; then
+              break
+            fi
+          fi
+
+          # Deleted artifacts drop out of the list, so re-fetching the top
+          # page always surfaces the next batch - no offset tracking needed.
+          # Artifacts that failed to delete stay in the list, so filter
+          # those out to avoid retrying them forever.
+          ids=$(gh api "/repos/${{ github.repository }}/actions/artifacts?per_page=100" --jq '.artifacts[].id')
+          if [ -n "$failed_ids" ]; then
+            ids=$(comm -23 <(echo "$ids" | sort) <(echo "$failed_ids" | sort))
+          fi
+          if [ "$MAX_DELETE" -gt 0 ] 2>/dev/null; then
+            ids=$(echo "$ids" | head -n "$remaining")
+          fi
+          if [ -z "$ids" ]; then
+            break
+          fi
+
           results=$(echo "$ids" | xargs -P 50 -I{} bash -c 'delete_artifact "$@"' _ {})
-        else
-          results=""
-        fi
-        count=$(echo "$results" | grep -c '^ok$' || true)
-        failed=$(echo "$results" | grep -c '^fail$' || true)
+          batch_ok=$(echo "$results" | grep -c ' ok$' || true)
+          new_failed=$(echo "$results" | awk '$2 == "fail" { print $1 }')
+          batch_failed=$( [ -n "$new_failed" ] && echo "$new_failed" | grep -c . || true)
+          count=$((count + batch_ok))
+          failed=$((failed + batch_failed))
+          if [ -n "$new_failed" ]; then
+            failed_ids="$failed_ids
+$new_failed"
+          fi
+          echo "Batch: deleted $batch_ok, failed $batch_failed (total so far: $count deleted, $failed failed)"
+        done
+
         echo "Deleted $count artifact(s), $failed failure(s)"
