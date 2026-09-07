@@ -12312,6 +12312,28 @@
     ]
   },
   {
+    "id": 4976,
+    "name": "Clyde",
+    "state": "VIC",
+    "url": "https://www.coles.com.au/find-stores/coles/vic/clyde-4976",
+    "lat": -38.125859,
+    "lng": 145.373396,
+    "address": "195 Riverland Rd",
+    "suburb": "Clyde",
+    "postcode": "3978",
+    "phone": "(03) 5953 5100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Fri",
+        "storeTime": "9am - 10pm"
+      },
+      {
+        "daysOfWeek": "Sat-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
+  },
+  {
     "id": 7758,
     "name": "Clyde North",
     "state": "VIC",
