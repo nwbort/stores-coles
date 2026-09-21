@@ -11,6 +11,8 @@ Options:
   --workers N     Concurrent workers (default: 1)
   --delay SECONDS Minimum seconds between requests globally (default: 2.0)
   --limit N       Only process first N stores (for testing)
+  --out PATH      Write only the stores processed by this run to PATH,
+                  instead of rewriting the whole stores.json
 
 Bot-blocking behaviour:
   Coles uses Akamai bot protection that blocks an IP after ~4 requests per
@@ -51,10 +53,10 @@ def load_stores():
         return json.load(f)
 
 
-def save_stores(stores):
-    with open(STORES_FILE, 'w') as f:
+def save_stores(stores, path=STORES_FILE):
+    with open(path, 'w') as f:
         json.dump(stores, f, indent=2)
-    print(f'  -> saved {STORES_FILE}', flush=True)
+    print(f'  -> saved {path}', flush=True)
 
 
 def fetch_one(store, rate_limiter, stop_flag):
@@ -79,6 +81,8 @@ def main():
     parser.add_argument('--delay', type=float, default=2.0,
                         help='Min seconds between requests globally (default: 2.0)')
     parser.add_argument('--limit', type=int, default=None, help='Max stores to process')
+    parser.add_argument('--out', default=None, metavar='PATH',
+                        help='Write only the stores processed by this run to PATH')
     parser.add_argument('--chunk', default=None, metavar='INDEX/TOTAL',
                         help='Process a slice of stores, e.g. --chunk 2/5 for the third of five chunks')
     args = parser.parse_args()
@@ -112,7 +116,14 @@ def main():
 
     if total == 0:
         print('Nothing to do.')
+        if args.out:
+            save_stores([], args.out)
         return
+
+    # --out emits just this run's slice; without it the whole file is rewritten.
+    # Either way these are the same store objects, so enrichment lands in both.
+    out_path = args.out or STORES_FILE
+    out_stores = to_enrich if args.out else stores
 
     rate_limiter = RateLimiter(args.delay)
     stop_flag = threading.Event()
@@ -151,9 +162,9 @@ def main():
                     failed += 1
 
                 if done % SAVE_INTERVAL == 0:
-                    save_stores(stores)
+                    save_stores(out_stores, out_path)
 
-    save_stores(stores)
+    save_stores(out_stores, out_path)
     enriched_total = sum(1 for s in stores if 'lat' in s)
     print(f'\nDone: {ok} enriched this run, {failed} failed, {enriched_total}/{len(stores)} total enriched')
 

@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """
-Merge N enriched stores.json files into one output file.
+Merge enriched store slices into one output file.
 
-For each store, the first input file that has an enriched version (has 'lat')
-wins. Stores not enriched in any input fall back to the version from the
-first input file.
+The first input is the base: the full store list, carrying whatever enrichment
+previous runs produced. Every later input is a patch — the slice a single
+enrichment chunk processed. A patch entry replaces the base entry when it is
+enriched (has 'lat'), so a forced re-enrich overwrites stale values; a chunk
+that was bot-blocked leaves the base entry alone. Stores absent from every
+patch keep their base version.
 
-Usage: python3 merge_stores.py <output_file> <input1> [<input2> ...]
+Usage: python3 merge_stores.py <output_file> <base> [<patch> ...]
 """
 
 import json
@@ -18,13 +21,15 @@ def merge(output_file, input_files):
         print('No input files provided.')
         sys.exit(1)
 
-    chunks = []
-    for path in input_files:
-        with open(path) as f:
-            chunks.append(json.load(f))
+    with open(input_files[0]) as f:
+        base = json.load(f)
 
-    base = chunks[0]
-    by_id = [{s['id']: s for s in chunk} for chunk in chunks]
+    patches = []
+    for path in input_files[1:]:
+        with open(path) as f:
+            patches.append(json.load(f))
+
+    by_id = [{s['id']: s for s in patch} for patch in patches]
 
     merged = []
     for store in base:
@@ -35,14 +40,15 @@ def merge(output_file, input_files):
     with open(output_file, 'w') as f:
         json.dump(merged, f, indent=2)
 
-    per_chunk = [sum(1 for s in chunk if 'lat' in s) for chunk in chunks]
+    patched = sum(1 for lookup in by_id for sid in lookup if 'lat' in lookup[sid])
     merged_enriched = sum(1 for s in merged if 'lat' in s)
-    chunk_summary = ', '.join(f'chunk {i}: {n}' for i, n in enumerate(per_chunk))
-    print(f'{chunk_summary} -> merged: {merged_enriched}/{len(merged)} enriched')
+    print(f'base: {sum(1 for s in base if "lat" in s)}/{len(base)} enriched, '
+          f'{len(patches)} patches contributing {patched} stores '
+          f'-> merged: {merged_enriched}/{len(merged)} enriched')
 
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
-        print(f'Usage: {sys.argv[0]} <output_file> <input1> [<input2> ...]')
+        print(f'Usage: {sys.argv[0]} <output_file> <base> [<patch> ...]')
         sys.exit(1)
     merge(sys.argv[1], sys.argv[2:])

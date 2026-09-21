@@ -61,7 +61,10 @@ jobs:
       uses: actions/upload-artifact@v7
       with:
         name: stores-base
-        path: stores.json
+        path: |
+          stores.json
+          enrich_stores.py
+          extract_store.py
         retention-days: 1
 
   enrich:
@@ -71,12 +74,10 @@ jobs:
       matrix:
         chunk: ${{ fromJson(needs.setup.outputs.chunk-matrix) }}
     steps:
-    - uses: actions/checkout@v6
-    - name: Set up Python
-      uses: actions/setup-python@v6
-      with:
-        python-version: "3.12"
-    - name: Download base stores.json
+    # No checkout or setup-python here: a full re-enrich runs ~176 of these
+    # jobs, and those two steps are over half of each job's log output. The
+    # scripts arrive with the artifact, and the runner image already has 3.12.
+    - name: Download base stores.json and scripts
       uses: actions/download-artifact@v8
       with:
         name: stores-base
@@ -84,7 +85,7 @@ jobs:
     - name: Enrich stores (chunk ${{ matrix.chunk }}/${{ needs.setup.outputs.chunk-count }})
       run: |
         CHUNK_COUNT="${{ needs.setup.outputs.chunk-count }}"
-        FLAGS="--chunk ${{ matrix.chunk }}/$CHUNK_COUNT"
+        FLAGS="--chunk ${{ matrix.chunk }}/$CHUNK_COUNT --out enriched.json"
         if [ "${ENRICH_FORCE}" = "1" ] || [ "$(date +%u)" = "7" ]; then
           echo "Full enrichment run (chunk ${{ matrix.chunk }}/$CHUNK_COUNT)"
           python3 enrich_stores.py --force $FLAGS
@@ -94,11 +95,12 @@ jobs:
         fi
       env:
         ENRICH_FORCE: ${{ inputs.full_enrich == true && '1' || '0' }}
-    - name: Upload enriched stores.json
+    # Just this chunk's stores, not a copy of the whole file per job.
+    - name: Upload enriched slice
       uses: actions/upload-artifact@v7
       with:
         name: stores-chunk-${{ matrix.chunk }}
-        path: stores.json
+        path: enriched.json
         retention-days: 1
 
   merge:
@@ -110,14 +112,19 @@ jobs:
       uses: actions/setup-python@v6
       with:
         python-version: "3.12"
-    - name: Download all chunk artifacts
+    - name: Download base and chunk artifacts
       uses: actions/download-artifact@v8
       with:
-        pattern: stores-chunk-*
+        pattern: stores-*
         path: /tmp/chunks
         merge-multiple: false
     - name: Merge stores
-      run: python3 merge_stores.py stores.json /tmp/chunks/stores-chunk-*/stores.json
+      run: |
+        # stores-base is the full list; the chunks are slices layered over it.
+        shopt -s nullglob
+        python3 merge_stores.py stores.json \
+          /tmp/chunks/stores-base/stores.json \
+          /tmp/chunks/stores-chunk-*/enriched.json
     - name: Commit and push
       run: |-
         git config user.name "Automated"
