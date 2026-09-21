@@ -11790,6 +11790,28 @@
     ]
   },
   {
+    "id": 5266,
+    "name": "Beveridge",
+    "state": "VIC",
+    "url": "https://www.coles.com.au/find-stores/coles/vic/beveridge-5266",
+    "lat": -37.467811,
+    "lng": 144.957563,
+    "address": "125 Camerons Lane",
+    "suburb": "Beveridge",
+    "postcode": "3753",
+    "phone": "(03) 8708 0100",
+    "trading_hours": [
+      {
+        "daysOfWeek": "Wed",
+        "storeTime": "8am - 10pm"
+      },
+      {
+        "daysOfWeek": "Thu-Sun",
+        "storeTime": "7am - 10pm"
+      }
+    ]
+  },
+  {
     "id": 7721,
     "name": "Blackburn North",
     "state": "VIC",
